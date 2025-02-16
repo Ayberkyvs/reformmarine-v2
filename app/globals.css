@@ -8,6 +8,7 @@
   --accent: #E53D00;
   --foreground: #080708;
   --background: #FFFFFF;
+  --foreground-muted: #404040;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
@@ -18,31 +19,31 @@ h1, h2, h3, h4, h5, h6 {
     @apply font-[Poppins];
   } */
   h1 {
-    @apply text-[61px] leading-[130%];
+    @apply text-[61px] leading-[130%] text-foreground;
   }
   h2 {
-    @apply text-[49px] leading-[130%];
+    @apply text-[49px] leading-[130%] text-foreground;
   }
   h3 {
-    @apply text-[39px] leading-[130%];
+    @apply text-[39px] leading-[130%] text-foreground;
   }
   h4 {
-    @apply text-[31px] leading-[130%];
+    @apply text-[31px] leading-[130%] text-foreground;
   }
   h5 {
-    @apply text-[25px] leading-[130%];
+    @apply text-[25px] leading-[130%] text-foreground;
   }
   h6 {
-    @apply text-[20px] leading-[130%];
+    @apply text-[20px] leading-[130%] text-foreground;
   }
   p {
-    @apply text-[16px] leading-[150%];
+    @apply text-[16px] leading-[150%] text-foreground-muted;
   }
   .small {
-    @apply text-[13px] leading-[150%];
+    @apply text-[13px] leading-[150%] text-foreground-muted;
   }
   .caption {
-    @apply text-[10px] leading-[150%];
+    @apply text-[10px] leading-[150%] text-foreground-muted;
   }
   :root {
     --radius: 0.5rem;
@@ -51,15 +52,24 @@ h1, h2, h3, h4, h5, h6 {
 
 @layer components {
   .header {
-    @apply w-full h-[90px] bg-background shadow-md;
+    @apply sticky top-0 w-full h-[90px] bg-background shadow-md z-[998];
   }
   .inner-header {
-    @apply justify-between items-center h-full;
+    @apply flex justify-between items-center h-full;
+  }
+  .benefits {
+    @apply w-full bg-primary-50 min-h-[500px] h-fit flex flex-col justify-center items-center;
+  }
+  .section-heading {
+    @apply flex flex-col justify-center items-start;
   }
 }
 
 @layer utilities {
   .layout {
-    @apply flex w-full max-w-screen-2xl mx-auto px-5 md:px-[70px];
+    @apply w-full max-w-screen-2xl mx-auto px-5 py-[50px] md:p-[70px];
+  }
+  .flex-center {
+    @apply flex justify-center items-center;
   }
 }

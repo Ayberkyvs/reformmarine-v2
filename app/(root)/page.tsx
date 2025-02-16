@@ -1,12 +1,148 @@
+import { HighlightedHeading } from "@/components/HighlightedHeading";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import SectionHeading from "../../components/SectionHeading";
+import { title } from "process";
+
 const Home = () => {
+	const benefits = [
+		{
+			icon: "/icons/quality.svg",
+			title: "Quality",
+			description:
+				"Quality is the standardization of certain customer expectations as a result of a product and service meeting certain standards.",
+		},
+		{
+			icon: "/icons/effective.svg",
+			title: "Cost-Effective",
+			description:
+				"By supplying our products from the first supplier, our customers are provided cost-effective.",
+		},
+		{
+			icon: "/icons/innovative.svg",
+			title: "Innovative Products",
+			description:
+				"It is aimed to ensure long-lasting operation of the systems by providing system upgrades using innovative products.",
+		},
+		{
+			icon: "/icons/expertise.svg",
+			title: "Expertise",
+			description:
+				"With our experienced service engineers, we provide result-oriented services by accurately identifying the needs of the vessel.",
+		},
+	];
 	return (
 		<>
-			<h1>Merhaba</h1>
-			<p className="">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-				voluptas sequi sunt animi quae voluptates illo omnis fugit quos! Non
-				nisi necessitatibus magnam nesciunt inventore nemo ipsa a debitis! Quo.
-			</p>
+			<section className="hero">
+				<div className="layout flex flex-col p-0 pt-8 gap-8">
+					<div className="grid grid-cols-12 gap-5 items-center">
+						<HighlightedHeading
+							text="Your Reliable Service in the Maritime"
+							highlightedWord="Service"
+							className="col-start-1 col-end-8 font-semibold uppercase"
+						/>
+						<div className="col-start-9 col-end-13 text-center">
+							<p>
+								Reform Marine is a company specialized in maintenance and repair
+								of electrical and machinery systems and offers special solutions
+								for the maritime.
+							</p>
+							<Button className="mt-2 bg-accent-500 text-white hover:bg-accent-600">
+								Learn More
+							</Button>
+						</div>
+					</div>
+					<div className="relative rounded-lg w-full h-fit">
+						<Image
+							src="/images/hero.webp"
+							alt="Cargo Ship"
+							priority
+							width={1300}
+							height={800}
+							className="relative w-full h-full rounded-lg"
+						/>
+						<div className="absolute bottom-0 flex items-center justify-between w-full h-[90px] px-5 bg-black/60 backdrop-blur-sm">
+							<div className="flex items-center justify-between !text-white">
+								<div className="flex-center flex-col p-6 size-auto">
+									<h6>500+</h6>
+									<p>Customers</p>
+								</div>
+								<div className="flex-center flex-col p-6 size-auto">
+									<h6>1.000+</h6>
+									<p>Products</p>
+								</div>
+								<div className="flex-center flex-col p-6 size-auto">
+									<h6>8+</h6>
+									<p>Years Experience</p>
+								</div>
+							</div>
+							<p className="text-white">
+								First priority is the safe navigation and operation of the
+								vessels.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section className="benefits">
+				<div className="layout flex flex-col gap-5">
+					<SectionHeading
+						title="Why Choose Us"
+						description="Reform Marine offers high quality products and services in the electrical and mechanical fields. This provides advantages in terms of reliability and performance. "
+					/>
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 h-fit">
+						{benefits.map((benefit: any, index: number) => (
+							<div
+								className="bg-white p-4 rounded-lg shadow-md flex flex-col items-start justify-start text-left border-neutral-100 border"
+								key={index}
+							>
+								<Image
+									src={benefit.icon}
+									alt={benefit.title}
+									width={50}
+									height={50}
+									className="bg-primary-500 p-2 aspect-square rounded-md"
+								/>
+								<h6 className="mt-2 font-semibold">{benefit.title}</h6>
+								<p className="mt-1">{benefit.description}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+			<section className="aboutus">
+				<div className="layout gap-5 grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
+					<div className="flex flex-col gap-5">
+						<SectionHeading
+							title="Reform Marine"
+							subtitle="ABOUT US"
+							description="Reform Marine  activity is providing mechanical and electrical service for ship and supplying spare parts. Our goal is to ensure safety and satisfaction in maritime operations by delivering high-quality service and a wide range of products to our customers in a timely and reliable manner.With our expert team and wide range of services, we offer fast and reliable solutions to all kinds of maritime needs of our customers. Reform Marine is proud to be a reliable service in the maritime world. We constantly improve ourselves and follow innovative technologies to understand the needs of our customers and offer them the most suitable solutions.
+Reform Marine is a company that set out with the mission of providing innovative and high-quality solutions to the maritime sector. 
+"
+						/>
+						<div className="grid grid-cols-[1fr_1fr_1fr] gap-5 w-full">
+							<div className="flex-center flex-col p-6 size-auto border border-neutral-300">
+								<h5 className="text-accent-500 font-semibold">500+</h5>
+								<p className="text-foreground">Customers</p>
+							</div>
+							<div className="flex-center flex-col p-6 size-auto border border-neutral-300">
+								<h5 className="text-accent-500 font-semibold">1.000+</h5>
+								<p className="text-foreground">Products</p>
+							</div>
+							<div className="flex-center flex-col p-6 size-auto border border-neutral-300">
+								<h5 className="text-accent-500 font-semibold">8+</h5>
+								<p className="text-foreground">Years Experience</p>
+							</div>
+						</div>
+					</div>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12076.489097905895!2d29.312066261429493!3d40.825277835552306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadd7659685b97%3A0x9f8ad867e6e6cc0e!2sReform%20Marine!5e0!3m2!1str!2str!4v1739734303765!5m2!1str!2str"
+						loading="lazy"
+						className="size-full min-h-[300px]"
+						title="Reform Marine Location"
+					></iframe>
+				</div>
+			</section>
 		</>
 	);
 };

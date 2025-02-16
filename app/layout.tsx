@@ -4,7 +4,7 @@ import "./globals.css";
 
 const poppins = Poppins({
 	variable: "--font-poppins",
-	weight: ["500", "700"],
+	weight: ["500", "600", "700", "800"],
 	subsets: ["latin"],
 });
 

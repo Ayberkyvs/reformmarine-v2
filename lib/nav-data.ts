@@ -9,14 +9,14 @@ export const navData = {
 					name: "Electrical Services",
 					description:
 						"Electrical services for residential and commercial buildings",
-					image: "/images/electrical.jpg",
+					image: "/images/electrical.webp",
 					href: "/services/electrical",
 				},
 				{
 					name: "Mechanical Services",
 					description:
 						"Mechanical services for residential and commercial buildings",
-					image: "/images/mechanical.jpg",
+					image: "/images/mechanical.webp",
 					href: "/services/mechanical",
 				},
 			],
