@@ -5,10 +5,10 @@ import "./globals.css";
 const poppins = Poppins({
 	variable: "--font-poppins",
 	weight: ["500", "700"],
+	subsets: ["latin"],
 });
 
 const montserrat = Montserrat({
-	variable: "--font-monsterrat",
 	subsets: ["latin"],
 });
 
@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${poppins.variable} ${montserrat.variable} antialiased`}
+				className={`${poppins.variable} ${montserrat.className} antialiased`}
 			>
 				{children}
 			</body>

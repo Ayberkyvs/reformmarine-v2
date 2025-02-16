@@ -2,9 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: #055195;
+  --secondary: #C4D6B0;
+  --accent: #E53D00;
+  --foreground: #080708;
+  --background: #FFFFFF;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+}
+
 @layer base {
-  .heading-1 {
-    @apply text-[61px];
+  /* h1, h2, h3, h4, h5, h6 {
+    @apply font-[Poppins];
+  } */
+  h1 {
+    @apply text-[61px] leading-[130%];
+  }
+  h2 {
+    @apply text-[49px] leading-[130%];
+  }
+  h3 {
+    @apply text-[39px] leading-[130%];
+  }
+  h4 {
+    @apply text-[31px] leading-[130%];
+  }
+  h5 {
+    @apply text-[25px] leading-[130%];
+  }
+  h6 {
+    @apply text-[20px] leading-[130%];
+  }
+  p {
+    @apply text-[16px] leading-[150%];
+  }
+  .small {
+    @apply text-[13px] leading-[150%];
+  }
+  .caption {
+    @apply text-[10px] leading-[150%];
   }
 }
 
