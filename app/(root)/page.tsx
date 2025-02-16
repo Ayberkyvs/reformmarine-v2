@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import SectionHeading from "../../components/SectionHeading";
 import { title } from "process";
+import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 
 const Home = () => {
 	const benefits = [
@@ -29,6 +30,60 @@ const Home = () => {
 			title: "Expertise",
 			description:
 				"With our experienced service engineers, we provide result-oriented services by accurately identifying the needs of the vessel.",
+		},
+	];
+	const content = [
+		{
+			title: "Electrical Service",
+			description:
+				"Reform Marine, as a company specialising in electrical systems maintenance and repair, offers tailor-made solutions to the maritime industry. Our professional teams optimise the travel experience by improving the safety and performance of vessels with electrical maintenance services.",
+			content: (
+				<Image
+					src="/images/electrical_scroll.webp"
+					alt="Image"
+					fill
+					className="h-full w-full"
+				/>
+			),
+		},
+		{
+			title: "Mechanical Service",
+			description:
+				"Reform Marine, as a company specialized senior engineer are perform to maintenance of ship mechanical services. This power includes engine maintenance and repair, regular checks of performance and results, maintenance of hydraulic systems,fuel system,quality of lubrication oil and also pneumatic equipment maintenance.",
+			content: (
+				<Image
+					src="/images/mechanical_scroll.webp"
+					alt="Image"
+					fill
+					className="h-full w-full"
+				/>
+			),
+		},
+		{
+			title: "Spare Parts",
+			description:
+				"Reform Marine offers quality services, products and spare parts for ships. We increase our service quality by providing you with all the parts you need after the service.",
+			content: (
+				<Image
+					src="/images/sparepart_scroll.webp"
+					alt="Image"
+					fill
+					className="h-full w-full"
+				/>
+			),
+		},
+		{
+			title: "Products",
+			description:
+				"Extensive product selection, superior workmanship, fast turnaround and on-time delivery make us your one-stop shop.Regardless of brand, the close follow-up of each customer is at the heart of our offering.",
+			content: (
+				<Image
+					src="/images/products_scroll.webp"
+					alt="Image"
+					fill
+					className="h-full w-full"
+				/>
+			),
 		},
 	];
 	return (
@@ -141,6 +196,16 @@ Reform Marine is a company that set out with the mission of providing innovative
 						className="size-full min-h-[300px]"
 						title="Reform Marine Location"
 					></iframe>
+				</div>
+			</section>
+			<section className="services">
+				<div className="layout flex flex-col gap-[50px]">
+					<SectionHeading
+						subtitle="Our Services"
+						title="Engineering Services"
+						description="Reform Marine is a company that provides service to ship engine and electrical equipment with its team specialized in the maritime. Our aim is to increase the service quality in the maritime and extend the service life of the system."
+					/>
+					<StickyScroll content={content} />
 				</div>
 			</section>
 		</>

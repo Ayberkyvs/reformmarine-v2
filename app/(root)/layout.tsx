@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
@@ -5,7 +6,7 @@ const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 		<>
 			<Header />
 			<main>{children}</main>
-			{/* <Footer /> */}
+			<Footer />
 		</>
 	);
 };
