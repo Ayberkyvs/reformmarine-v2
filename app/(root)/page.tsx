@@ -2,8 +2,8 @@ import { HighlightedHeading } from "@/components/HighlightedHeading";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import SectionHeading from "../../components/SectionHeading";
-import { title } from "process";
 import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
+import Stats from "@/components/Stats";
 
 const Home = () => {
 	const benefits = [
@@ -32,7 +32,7 @@ const Home = () => {
 				"With our experienced service engineers, we provide result-oriented services by accurately identifying the needs of the vessel.",
 		},
 	];
-	const content = [
+	const services = [
 		{
 			title: "Electrical Service",
 			description:
@@ -86,18 +86,24 @@ const Home = () => {
 			),
 		},
 	];
+	const statsData = [
+		{ value: "500+", label: "Customers" },
+		{ value: "1.000+", label: "Products" },
+		{ value: "8+", label: "Years Experience" },
+	];
+
 	return (
 		<>
 			<section className="hero">
 				<div className="layout flex flex-col p-0 pt-8 gap-8">
-					<div className="grid grid-cols-12 gap-5 items-center">
+					<div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center justify-between">
 						<HighlightedHeading
 							text="Your Reliable Service in the Maritime"
 							highlightedWord="Service"
-							className="col-start-1 col-end-8 font-semibold uppercase"
+							className="h2 sm:h1 text-center lg:col-span-7 lg:text-left font-semibold uppercase"
 						/>
-						<div className="col-start-9 col-end-13 text-center">
-							<p>
+						<div className="lg:col-span-4 lg:col-end-13 text-center">
+							<p className="p">
 								Reform Marine is a company specialized in maintenance and repair
 								of electrical and machinery systems and offers special solutions
 								for the maritime.
@@ -116,22 +122,28 @@ const Home = () => {
 							height={800}
 							className="relative w-full h-full rounded-lg"
 						/>
-						<div className="absolute bottom-0 flex items-center justify-between w-full h-[90px] px-5 bg-black/60 backdrop-blur-sm">
-							<div className="flex items-center justify-between !text-white">
-								<div className="flex-center flex-col p-6 size-auto">
-									<h6>500+</h6>
-									<p>Customers</p>
+						<div className="absolute bottom-0 flex items-center justify-center md:justify-between w-full h-[70px] md:h-[90px] px-5 bg-black/60 backdrop-blur-sm">
+							<div className="flex items-center justify-between">
+								<div className="flex-center flex-col p-6 size-auto ">
+									<span className="h6 text-white font-semibold">500+</span>
+									<p className="small md:text-base text-neutral-300 line-clamp-1">
+										Customers
+									</p>
 								</div>
 								<div className="flex-center flex-col p-6 size-auto">
-									<h6>1.000+</h6>
-									<p>Products</p>
+									<span className="h6 text-white font-semibold">1.000+</span>
+									<p className="small md:text-base text-neutral-300 line-clamp-1">
+										Products
+									</p>
 								</div>
 								<div className="flex-center flex-col p-6 size-auto">
-									<h6>8+</h6>
-									<p>Years Experience</p>
+									<span className="h6 text-white font-semibold">8+</span>
+									<p className="small md:text-base text-neutral-300 line-clamp-1">
+										Years Experience
+									</p>
 								</div>
 							</div>
-							<p className="text-white">
+							<p className="p text-white hidden lg:block">
 								First priority is the safe navigation and operation of the
 								vessels.
 							</p>
@@ -148,7 +160,7 @@ const Home = () => {
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 h-fit">
 						{benefits.map((benefit: any, index: number) => (
 							<div
-								className="bg-white p-4 rounded-lg shadow-md flex flex-col items-start justify-start text-left border-neutral-100 border"
+								className="bg-white p-4 rounded-lg shadow-md flex flex-col items-start justify-start text-left border-neutral-100 border gap-2"
 								key={index}
 							>
 								<Image
@@ -158,8 +170,8 @@ const Home = () => {
 									height={50}
 									className="bg-primary-500 p-2 aspect-square rounded-md"
 								/>
-								<h6 className="mt-2 font-semibold">{benefit.title}</h6>
-								<p className="mt-1">{benefit.description}</p>
+								<h6 className="h6 mt-2 font-semibold">{benefit.title}</h6>
+								<p className="p mt-1">{benefit.description}</p>
 							</div>
 						))}
 					</div>
@@ -175,20 +187,7 @@ const Home = () => {
 Reform Marine is a company that set out with the mission of providing innovative and high-quality solutions to the maritime sector. 
 "
 						/>
-						<div className="grid grid-cols-[1fr_1fr_1fr] gap-5 w-full">
-							<div className="flex-center flex-col p-6 size-auto border border-neutral-300">
-								<h5 className="text-accent-500 font-semibold">500+</h5>
-								<p className="text-foreground">Customers</p>
-							</div>
-							<div className="flex-center flex-col p-6 size-auto border border-neutral-300">
-								<h5 className="text-accent-500 font-semibold">1.000+</h5>
-								<p className="text-foreground">Products</p>
-							</div>
-							<div className="flex-center flex-col p-6 size-auto border border-neutral-300">
-								<h5 className="text-accent-500 font-semibold">8+</h5>
-								<p className="text-foreground">Years Experience</p>
-							</div>
-						</div>
+						<Stats stats={statsData} variant="default" />
 					</div>
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12076.489097905895!2d29.312066261429493!3d40.825277835552306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadd7659685b97%3A0x9f8ad867e6e6cc0e!2sReform%20Marine!5e0!3m2!1str!2str!4v1739734303765!5m2!1str!2str"
@@ -205,7 +204,7 @@ Reform Marine is a company that set out with the mission of providing innovative
 						title="Engineering Services"
 						description="Reform Marine is a company that provides service to ship engine and electrical equipment with its team specialized in the maritime. Our aim is to increase the service quality in the maritime and extend the service life of the system."
 					/>
-					<StickyScroll content={content} />
+					<StickyScroll content={services} />
 				</div>
 			</section>
 		</>

@@ -48,6 +48,7 @@ export default {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			screens: {
+				xs: "475px",
 				"2xl": "1440px",
 			},
 			keyframes: {

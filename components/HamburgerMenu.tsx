@@ -23,7 +23,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 						<Menu className="h-6 w-6" />
 					</Button>
 				</SheetTrigger>
-				<SheetContent className="z-[999]">
+				<SheetContent className="z-[999] w-full">
 					<SheetTitle className="hidden">Menu</SheetTitle>
 					<NavMenu items={navItems} isMobile={true} className="mt-5" />
 				</SheetContent>

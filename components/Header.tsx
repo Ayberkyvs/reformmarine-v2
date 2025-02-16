@@ -10,7 +10,9 @@ const Header = () => {
 		<>
 			<header className="header">
 				<div className={cn("inner-header layout !py-0")}>
-					<Logo className="w-[110px] h-[58px] text-primary-500" />
+					<Link href="/">
+						<Logo className="w-[110px] h-[58px] text-primary-500" />
+					</Link>
 					<NavMenu items={navData.items} className="hidden md:flex" />
 					<Link href="tel:+905373442566" className="small hidden md:flex">
 						+90 537 344 25 66

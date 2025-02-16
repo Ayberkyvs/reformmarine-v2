@@ -9,3 +9,8 @@ export type NavItem = {
 		href?: string;
 	}[];
 };
+
+export type Stat = {
+	value: string;
+	label: string;
+};

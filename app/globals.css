@@ -9,44 +9,45 @@
   --foreground: #080708;
   --background: #FFFFFF;
   --foreground-muted: #404040;
+  --radius: 0.5rem;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
+  line-height: 130%;
+  color: var(--foreground);
+}
+p, span {
+  line-height: 150%;
+  color: var(--foreground-muted);
 }
 
 @layer base {
-  /* h1, h2, h3, h4, h5, h6 {
-    @apply font-[Poppins];
-  } */
-  h1 {
+  .h1 {
     @apply text-[61px] leading-[130%] text-foreground;
   }
-  h2 {
+  .h2 {
     @apply text-[49px] leading-[130%] text-foreground;
   }
-  h3 {
+  .h3 {
     @apply text-[39px] leading-[130%] text-foreground;
   }
-  h4 {
+  .h4 {
     @apply text-[31px] leading-[130%] text-foreground;
   }
-  h5 {
+  .h5 {
     @apply text-[25px] leading-[130%] text-foreground;
   }
-  h6 {
+  .h6 {
     @apply text-[20px] leading-[130%] text-foreground;
   }
-  p {
-    @apply text-[16px] leading-[150%] text-foreground-muted;
+  .p {
+    @apply text-[16px] leading-[150%] text-foreground-muted break-words text-ellipsis;
   }
   .small {
     @apply text-[13px] leading-[150%] text-foreground-muted;
   }
   .caption {
     @apply text-[10px] leading-[150%] text-foreground-muted;
-  }
-  :root {
-    --radius: 0.5rem;
   }
 }
 
@@ -60,14 +61,23 @@ h1, h2, h3, h4, h5, h6 {
   .benefits {
     @apply w-full bg-primary-50 min-h-[500px] h-fit flex flex-col justify-center items-center;
   }
+  .aboutus {
+    @apply w-full h-fit;
+  }
+  .services {
+    @apply w-full h-fit;
+  }
   .section-heading {
     @apply flex flex-col justify-center items-start;
+  }
+  .footer {
+    @apply w-full bg-primary-800 h-fit;
   }
 }
 
 @layer utilities {
   .layout {
-    @apply w-full max-w-screen-2xl mx-auto px-5 py-[50px] md:p-[70px];
+    @apply w-full max-w-screen-2xl mx-auto px-5 py-[50px] md:p-[50px] lg:p-[70px];
   }
   .flex-center {
     @apply flex justify-center items-center;
