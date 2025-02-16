@@ -10,7 +10,7 @@ const Footer = () => {
 						<div className="flex flex-col gap-2">
 							<Logo className="text-white w-[120px] h-[63px]" />
 							<span className="small text-white">
-								Your Reliable Service in Maritime
+								Your Reliable Service in the Maritime
 							</span>
 						</div>
 						<ul className="small text-white text-left sm:text-right">

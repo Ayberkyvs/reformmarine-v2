@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionHeading from "../../components/SectionHeading";
 import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 import Stats from "@/components/Stats";
+import FadeIn from "@/components/animations/FadeIn";
 
 const Home = () => {
 	const benefits = [
@@ -159,20 +160,25 @@ const Home = () => {
 					/>
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 h-fit">
 						{benefits.map((benefit: any, index: number) => (
-							<div
-								className="bg-white p-4 rounded-lg shadow-md flex flex-col items-start justify-start text-left border-neutral-100 border gap-2"
+							<FadeIn
+								delay={0.2 + index * 0.2}
+								duration={0.8}
+								direction="left"
+								className="w-full h-full flex"
 								key={index}
 							>
-								<Image
-									src={benefit.icon}
-									alt={benefit.title}
-									width={50}
-									height={50}
-									className="bg-primary-500 p-2 aspect-square rounded-md"
-								/>
-								<h6 className="h6 mt-2 font-semibold">{benefit.title}</h6>
-								<p className="p mt-1">{benefit.description}</p>
-							</div>
+								<div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-start justify-start text-left border-neutral-100 border gap-2">
+									<Image
+										src={benefit.icon}
+										alt={benefit.title}
+										width={50}
+										height={50}
+										className="bg-primary-500 p-2 aspect-square rounded-md"
+									/>
+									<h6 className="h6 mt-2 font-semibold">{benefit.title}</h6>
+									<p className="p mt-1">{benefit.description}</p>
+								</div>
+							</FadeIn>
 						))}
 					</div>
 				</div>
@@ -189,12 +195,14 @@ Reform Marine is a company that set out with the mission of providing innovative
 						/>
 						<Stats stats={statsData} variant="default" />
 					</div>
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12076.489097905895!2d29.312066261429493!3d40.825277835552306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadd7659685b97%3A0x9f8ad867e6e6cc0e!2sReform%20Marine!5e0!3m2!1str!2str!4v1739734303765!5m2!1str!2str"
-						loading="lazy"
-						className="size-full min-h-[300px]"
-						title="Reform Marine Location"
-					></iframe>
+					<FadeIn direction="left" delay={0.3} duration={0.8}>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12076.489097905895!2d29.312066261429493!3d40.825277835552306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadd7659685b97%3A0x9f8ad867e6e6cc0e!2sReform%20Marine!5e0!3m2!1str!2str!4v1739734303765!5m2!1str!2str"
+							loading="lazy"
+							className="size-full min-h-[300px]"
+							title="Reform Marine Location"
+						></iframe>
+					</FadeIn>
 				</div>
 			</section>
 			<section className="services">
