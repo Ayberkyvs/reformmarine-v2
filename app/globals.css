@@ -6,6 +6,8 @@
   --primary: #055195;
   --secondary: #C4D6B0;
   --accent: #E53D00;
+  --foreground: #080708;
+  --background: #FFFFFF;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
@@ -48,9 +50,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @layer components {
-
+  .header {
+    @apply w-full h-[90px] bg-background shadow-md;
+  }
+  .inner-header {
+    @apply justify-between items-center h-full;
+  }
 }
 
 @layer utilities {
-
+  .layout {
+    @apply flex w-full max-w-screen-2xl mx-auto px-5 md:px-[70px];
+  }
 }
