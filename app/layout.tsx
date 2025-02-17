@@ -30,6 +30,10 @@ export const metadata: Metadata = {
 		locale: "en_US",
 	},
 	applicationName: "Reform Marine",
+	appleWebApp: {
+		title: "Reform Marine",
+		statusBarStyle: "black-translucent",
+	},
 	keywords: [
 		"Reform Marine",
 		"Spare Parts",
@@ -49,9 +53,6 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<Head>
-				<meta name="apple-mobile-web-app-title" content="Reform" />
-			</Head>
 			<body
 				className={`${poppins.variable} ${montserrat.className} antialiased scroll-smooth`}
 			>
