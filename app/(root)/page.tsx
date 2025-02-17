@@ -6,7 +6,11 @@ import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 import FadeIn from "@/components/animations/FadeIn";
 import AboutUs from "@/components/AboutUs";
 import { benefits, services } from "@/lib/data";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+	title: "Home",
+};
 const Home = () => {
 	return (
 		<>
@@ -36,6 +40,7 @@ const Home = () => {
 							priority
 							width={1300}
 							height={800}
+							objectFit="cover"
 							className="relative w-full h-full rounded-lg"
 						/>
 						<div className="absolute bottom-0 flex items-center justify-center md:justify-between w-full h-[70px] md:h-[90px] px-5 bg-black/60 backdrop-blur-sm">

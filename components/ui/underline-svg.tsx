@@ -11,7 +11,7 @@ export const UnderlineSvg = ({ className, ...props }: UnderlineSvgProps) => {
 			viewBox="0 0 287 20"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
-			className={cn("absolute -bottom-2 left-0 w-full h-auto", className)}
+			className={cn("absolute -bottom-0 left-0 w-full h-auto", className)}
 			preserveAspectRatio="none"
 			{...props}
 		>
