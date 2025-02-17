@@ -25,6 +25,7 @@ export type NavItem = {
 	name: string;
 	href?: string;
 	image?: string;
+	isDisabled: boolean;
 	items?: {
 		name: string;
 		description: string;
@@ -48,8 +49,12 @@ const NavMenu: React.FC<NavMenuProps> = ({
 	if (isMobile) {
 		return (
 			<Accordion type="single" collapsible className={cn("w-full", className)}>
-				{items.map((item, index) => (
-					<AccordionItem value={`item-${index}`} key={item.name}>
+				{items.map((item: NavItem, index: number) => (
+					<AccordionItem
+						value={`item-${index}`}
+						key={item.name}
+						disabled={item.isDisabled}
+					>
 						{item.href ? (
 							<Link
 								href={item.href}
@@ -104,12 +109,20 @@ const NavMenu: React.FC<NavMenuProps> = ({
 	return (
 		<NavigationMenu className={className}>
 			<NavigationMenuList>
-				{items.map((item) => (
-					<NavigationMenuItem key={item.name}>
+				{items.map((item: NavItem, index: number) => (
+					<NavigationMenuItem key={item.name + index}>
 						{item.href ? (
-							<Link href={item.href} legacyBehavior passHref>
+							<Link
+								href={!item.isDisabled ? item.href : ""}
+								legacyBehavior
+								passHref
+							>
 								<NavigationMenuLink
-									className={navigationMenuTriggerStyle()}
+									className={cn(navigationMenuTriggerStyle(), {
+										"focus:bg-transparent hover:bg-transparent focus:text-neutral-600 hover:text-neutral-600 text-neutral-600 cursor-not-allowed":
+											item.isDisabled,
+									})}
+									title={item.name}
 									active={pathname === item.href}
 								>
 									{item.name}
@@ -117,12 +130,14 @@ const NavMenu: React.FC<NavMenuProps> = ({
 							</Link>
 						) : (
 							<>
-								<NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
+								<NavigationMenuTrigger disabled={item.isDisabled}>
+									{item.name}
+								</NavigationMenuTrigger>
 								<NavigationMenuContent>
 									<ul className="grid gap-3 p-2 w-[400px] sm:w-[500px] sm:grid-cols-2 lg:w-[600px]">
 										{item.items?.map((dropdownItem) => (
 											<li key={dropdownItem.name}>
-												<NavigationMenuLink asChild>
+												<NavigationMenuLink asChild title={dropdownItem.name}>
 													<Link
 														className="flex h-full select-none flex-col justify-start rounded-md p-6 no-underline outline-none focus:shadow-md hover:bg-slate-50"
 														href={dropdownItem.href || ""}

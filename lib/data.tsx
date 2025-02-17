@@ -4,6 +4,33 @@ import LinkedIn from "@/components/ui/linkedin-logo";
 import WhatsApp from "@/components/ui/whatsapp-logo";
 import Image from "next/image";
 
+const navData = {
+	items: [
+		{ name: "Home", href: "/", isDisabled: false },
+		{ name: "Products", href: "/products", isDisabled: true },
+		{
+			name: "Services",
+			items: [
+				{
+					name: "Electrical Services",
+					description:
+						"Reform Marine, as a company specialising in electrical systems maintenance and repair, offers tailor-made solutions to the maritime industry",
+					image: "/images/electrical.webp",
+					href: "/services/electrical",
+				},
+				{
+					name: "Mechanical Services",
+					description:
+						"Reform Marine, as a company specialized senior engineer are perform to maintenance of ship mechanical services. ",
+					image: "/images/mechanical.webp",
+					href: "/services/mechanical",
+				},
+			],
+			isDisabled: false,
+		},
+		{ name: "About Us", href: "/about-us", isDisabled: false },
+	],
+};
 const statsData = [
 	{ value: "500+", label: "Customers" },
 	{ value: "1.000+", label: "Products" },
@@ -227,4 +254,11 @@ const services = {
 	],
 };
 
-export { statsData, benefits, socialLinks, stickyScrollData, services };
+export {
+	navData,
+	statsData,
+	benefits,
+	socialLinks,
+	stickyScrollData,
+	services,
+};

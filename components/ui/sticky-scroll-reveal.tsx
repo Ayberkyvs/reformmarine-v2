@@ -55,7 +55,7 @@ export const StickyScroll = ({
 							<motion.h2
 								initial={{ opacity: 0 }}
 								animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-								className="h5 font-bold"
+								className="h5 font-semibold"
 							>
 								{item.title}
 							</motion.h2>

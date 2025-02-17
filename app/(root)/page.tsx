@@ -7,6 +7,7 @@ import FadeIn from "@/components/animations/FadeIn";
 import AboutUs from "@/components/AboutUs";
 import { benefits, stickyScrollData } from "@/lib/data";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "Home",
@@ -28,9 +29,11 @@ const Home = () => {
 								of electrical and machinery systems and offers special solutions
 								for the maritime.
 							</p>
-							<Button className="mt-2 bg-accent-500 text-white hover:bg-accent-600">
-								Learn More
-							</Button>
+							<Link href="/services">
+								<Button className="mt-2 bg-accent-500 text-white hover:bg-accent-600">
+									Learn More
+								</Button>
+							</Link>
 						</div>
 					</div>
 					<div className="relative rounded-lg w-full h-fit">

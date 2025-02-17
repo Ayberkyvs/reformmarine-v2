@@ -2,7 +2,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import HamburgerMenu from "./HamburgerMenu";
 import NavMenu from "./NavMenu";
-import { navData } from "@/lib/nav-data";
+import { navData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Socials from "./Socials";
 import Yavas from "./ui/ayberk-yavas";
