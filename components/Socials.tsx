@@ -1,8 +1,5 @@
-import { cn } from "@/lib/utils";
 import type { SocialLink } from "@/types";
 import Link from "next/link";
-import React from "react";
-
 interface SocialsProps {
 	links: SocialLink[];
 	className: string;

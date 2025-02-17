@@ -2,6 +2,8 @@ import Link from "next/link";
 import Logo from "./Logo";
 import Image from "next/image";
 import Yavas from "./ui/ayberk-yavas";
+import Socials from "./Socials";
+import { socialLinks } from "@/lib/data";
 const Footer = () => {
 	return (
 		<>
@@ -33,10 +35,13 @@ const Footer = () => {
 						</ul>
 					</div>
 					<hr className="my-2" />
-					<p className="small text-white">
-						Copyright © {new Date().getFullYear()} Reform Marine. All rights
-						reserved.
-					</p>
+					<div className="flex justify-between flex-wrap items-center">
+						<p className="small text-white">
+							Copyright © {new Date().getFullYear()} Reform Marine. All rights
+							reserved.
+						</p>
+						<Socials links={socialLinks} className="flex gap-2 text-white" />
+					</div>
 				</div>
 				<div className="w-full h-[40px] bg-primary-50">
 					<div className="layout h-full !py-0 flex justify-end items-center">

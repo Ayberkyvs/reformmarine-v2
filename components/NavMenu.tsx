@@ -19,6 +19,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
+import { usePathname } from "next/navigation";
 
 export type NavItem = {
 	name: string;
@@ -43,6 +44,7 @@ const NavMenu: React.FC<NavMenuProps> = ({
 	isMobile = false,
 	className,
 }) => {
+	const pathname = usePathname();
 	if (isMobile) {
 		return (
 			<Accordion type="single" collapsible className={cn("w-full", className)}>
@@ -106,7 +108,10 @@ const NavMenu: React.FC<NavMenuProps> = ({
 					<NavigationMenuItem key={item.name}>
 						{item.href ? (
 							<Link href={item.href} legacyBehavior passHref>
-								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+								<NavigationMenuLink
+									className={navigationMenuTriggerStyle()}
+									active={pathname === item.href}
+								>
 									{item.name}
 								</NavigationMenuLink>
 							</Link>

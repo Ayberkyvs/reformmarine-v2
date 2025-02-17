@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import SectionHeading from "../../components/SectionHeading";
 import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
-import Stats from "@/components/Stats";
 import FadeIn from "@/components/animations/FadeIn";
 import AboutUs from "@/components/AboutUs";
 import { benefits } from "@/lib/data";

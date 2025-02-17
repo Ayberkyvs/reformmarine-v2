@@ -5,34 +5,10 @@ import NavMenu from "./NavMenu";
 import { navData } from "@/lib/nav-data";
 import { cn } from "@/lib/utils";
 import Socials from "./Socials";
-import Instagram from "./ui/instagram-logo";
-import LinkedIn from "./ui/linkedin-logo";
-import GoogleMaps from "./ui/google-map";
-import WhatsApp from "./ui/whatsapp-logo";
 import Yavas from "./ui/ayberk-yavas";
+import { socialLinks } from "@/lib/data";
+
 const Header = () => {
-	const socialLinks = [
-		{
-			icon: <WhatsApp className="aspect-square w-[1em] h-[1em]" />,
-			name: "WhatsApp",
-			href: "http://wa.me/905546733676",
-		},
-		{
-			icon: <Instagram className="aspect-square w-[1em] h-[1em]" />,
-			name: "Instagram",
-			href: "https://www.instagram.com/reformmarine/",
-		},
-		{
-			icon: <LinkedIn className="aspect-square w-[1em] h-[1em]" />,
-			name: "LinkedIn",
-			href: "https://www.linkedin.com/company/reformmarine",
-		},
-		{
-			icon: <GoogleMaps className="aspect-square w-[1em] h-[1em]" />,
-			name: "Google Maps",
-			href: "https://www.google.com/maps/place/Reform+Marine/@40.8184183,29.2955793,18.72z/data=!4m6!3m5!1s0x14cadd7659685b97:0x9f8ad867e6e6cc0e!8m2!3d40.8183382!4d29.296018!16s%2Fg%2F11w3tk9ws3?hl=tr&coh=219815&entry=tts&g_ep=EgoyMDI0MDYxOS4xKgBIAVAD",
-		},
-	];
 	return (
 		<>
 			<header className="header">
