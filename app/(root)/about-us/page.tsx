@@ -4,6 +4,7 @@ import SectionHeading from "@/components/SectionHeading";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import FadeIn from "@/components/animations/FadeIn";
+import HeroWithBreadcrumb from "@/components/HeroWithBreadcrumb";
 
 interface AboutUsSectionProps {
 	title: string;
@@ -45,6 +46,12 @@ const AboutUsSection = ({ ...props }: AboutUsSectionProps) => {
 const Page = () => {
 	return (
 		<>
+			<HeroWithBreadcrumb
+				title="About Us"
+				backgroundImageHref="/images/about-us.webp"
+				backgroundImageAlt="Aerial Photography of Cityscape at Night"
+				color="white"
+			/>
 			<div className="about">
 				<AboutUs />
 			</div>

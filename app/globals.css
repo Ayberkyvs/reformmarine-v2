@@ -46,25 +46,25 @@ body::-webkit-scrollbar-thumb {
 }
 @layer base {
   .h1 {
-    @apply text-[61px] leading-[130%] text-foreground;
+    @apply text-[61px] leading-[130%];
   }
   .h2 {
-    @apply text-[49px] leading-[130%] text-foreground;
+    @apply text-[49px] leading-[130%];
   }
   .h3 {
-    @apply text-[39px] leading-[130%] text-foreground;
+    @apply text-[39px] leading-[130%];
   }
   .h4 {
-    @apply text-[31px] leading-[130%] text-foreground;
+    @apply text-[31px] leading-[130%];
   }
   .h5 {
-    @apply text-[25px] leading-[130%] text-foreground;
+    @apply text-[25px] leading-[130%];
   }
   .h6 {
-    @apply text-[20px] leading-[130%] text-foreground;
+    @apply text-[20px] leading-[130%];
   }
   .p {
-    @apply text-[16px] leading-[150%] text-foreground-muted break-words text-ellipsis;
+    @apply text-[16px] leading-[150%] break-words text-ellipsis;
   }
   .small {
     @apply text-[13px] leading-[150%] text-foreground-muted;

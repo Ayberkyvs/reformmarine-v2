@@ -22,7 +22,7 @@ const Header = () => {
 						className="hidden md:flex text-lg gap-2 text-black"
 					/>
 					<HamburgerMenu className="md:hidden">
-						<div className="relative h-full">
+						<div className="flex flex-col h-full">
 							<Link href="/">
 								<Logo className="h-[58px] text-black" variant="icon" />
 							</Link>
@@ -31,7 +31,7 @@ const Header = () => {
 								links={socialLinks}
 								className="flex md:hidden text-xl gap-2 text-black px-5 mt-4"
 							/>
-							<div className="absolute bottom-0 bg-primary-50 w-full p-4 rounded-md">
+							<div className="bg-primary-50 w-full p-4 rounded-md mt-auto">
 								<Yavas className="place-self-end" />
 							</div>
 						</div>
