@@ -5,68 +5,13 @@ import SectionHeading from "../../components/SectionHeading";
 import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 import FadeIn from "@/components/animations/FadeIn";
 import AboutUs from "@/components/AboutUs";
-import { benefits } from "@/lib/data";
+import { benefits, services } from "@/lib/data";
 
 const Home = () => {
-	const services = [
-		{
-			title: "Electrical Service",
-			description:
-				"Reform Marine, as a company specialising in electrical systems maintenance and repair, offers tailor-made solutions to the maritime industry. Our professional teams optimise the travel experience by improving the safety and performance of vessels with electrical maintenance services.",
-			content: (
-				<Image
-					src="/images/electrical_scroll.webp"
-					alt="Image"
-					fill
-					className="h-full w-full"
-				/>
-			),
-		},
-		{
-			title: "Mechanical Service",
-			description:
-				"Reform Marine, as a company specialized senior engineer are perform to maintenance of ship mechanical services. This power includes engine maintenance and repair, regular checks of performance and results, maintenance of hydraulic systems,fuel system,quality of lubrication oil and also pneumatic equipment maintenance.",
-			content: (
-				<Image
-					src="/images/mechanical_scroll.webp"
-					alt="Image"
-					fill
-					className="h-full w-full"
-				/>
-			),
-		},
-		{
-			title: "Spare Parts",
-			description:
-				"Reform Marine offers quality services, products and spare parts for ships. We increase our service quality by providing you with all the parts you need after the service.",
-			content: (
-				<Image
-					src="/images/sparepart_scroll.webp"
-					alt="Image"
-					fill
-					className="h-full w-full"
-				/>
-			),
-		},
-		{
-			title: "Products",
-			description:
-				"Extensive product selection, superior workmanship, fast turnaround and on-time delivery make us your one-stop shop.Regardless of brand, the close follow-up of each customer is at the heart of our offering.",
-			content: (
-				<Image
-					src="/images/products_scroll.webp"
-					alt="Image"
-					fill
-					className="h-full w-full"
-				/>
-			),
-		},
-	];
-
 	return (
 		<>
 			<section className="hero">
-				<div className="layout flex flex-col p-0 pt-8 gap-8">
+				<div className="layout flex flex-col !pb-0 pt-8 gap-8">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-center justify-between">
 						<HighlightedHeading
 							text="Your Reliable Service in the Maritime"
