@@ -9,7 +9,11 @@ const Socials = ({ links, className }: SocialsProps) => {
 		<>
 			<div className={className}>
 				{links.map((link: SocialLink, index: number) => (
-					<Link key={index} href={link.href}>
+					<Link
+						key={link.href + index}
+						href={link.href}
+						className="w-[1em] h-[1em]"
+					>
 						{link.icon}
 					</Link>
 				))}
