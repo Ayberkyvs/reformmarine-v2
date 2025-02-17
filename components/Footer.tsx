@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import Image from "next/image";
+import Yavas from "./ui/ayberk-yavas";
 const Footer = () => {
 	return (
 		<>
@@ -38,17 +39,8 @@ const Footer = () => {
 					</p>
 				</div>
 				<div className="w-full h-[40px] bg-primary-50">
-					<div className="layout h-full !py-0 flex justify-end items-center text-end gap-1">
-						<span className="small text-black">powered by </span>
-						<Link href="https://ayberkyavas.com/">
-							<Image
-								src="https://ayberkyavas.com/logo.svg"
-								width={51}
-								height={28}
-								alt="Ayberk Yavas Logo"
-								className="brightness-0"
-							/>
-						</Link>
+					<div className="layout h-full !py-0 flex justify-end items-center">
+						<Yavas />
 					</div>
 				</div>
 			</footer>

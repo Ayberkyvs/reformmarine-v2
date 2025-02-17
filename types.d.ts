@@ -14,3 +14,9 @@ export type Stat = {
 	value: string;
 	label: string;
 };
+
+export type SocialLink = {
+	icon?: React.ReactNode;
+	name: string;
+	href: string;
+};
