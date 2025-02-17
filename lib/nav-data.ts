@@ -8,14 +8,14 @@ export const navData = {
 				{
 					name: "Electrical Services",
 					description:
-						"Reform Marine, as a company specialising in electrical systems maintenance and repair, offers tailor-made solutions to the maritime industry.",
+						"Reform Marine, as a company specialising in electrical systems maintenance and repair, offers tailor-made solutions to the maritime industry",
 					image: "/images/electrical.webp",
 					href: "/services/electrical",
 				},
 				{
 					name: "Mechanical Services",
 					description:
-						"Reform Marine, as a company specialized senior engineer are perform to maintenance of ship mechanical services.",
+						"Reform Marine, as a company specialized senior engineer are perform to maintenance of ship mechanical services. ",
 					image: "/images/mechanical.webp",
 					href: "/services/mechanical",
 				},

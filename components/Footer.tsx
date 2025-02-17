@@ -41,7 +41,10 @@ const Footer = () => {
 							Copyright © {new Date().getFullYear()} Reform Marine. All rights
 							reserved.
 						</p>
-						<Socials links={socialLinks} className="flex gap-2 text-white" />
+						<Socials
+							links={socialLinks}
+							className="flex gap-2 text-white mt-2 sm:mt-0"
+						/>
 					</div>
 				</div>
 				<div className="w-full h-[40px] bg-primary-50">

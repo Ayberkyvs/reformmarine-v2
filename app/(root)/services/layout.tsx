@@ -4,19 +4,25 @@ import Link from "next/link";
 import HeroWithBreadcrumb from "@/components/HeroWithBreadcrumb";
 import { usePathname } from "next/navigation";
 
-interface ServiceLayoutProps {
-	children: React.ReactNode;
-}
-
-const Layout = ({ children }: ServiceLayoutProps) => {
+const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 	const pathname = usePathname().split("/").filter(Boolean)[1];
 	const isElectrical = pathname === "electrical";
 	return (
 		<div className="min-h-screen">
 			<HeroWithBreadcrumb
-				title={isElectrical ? "Electrical Service" : "Mechanical Service"}
+				title={
+					pathname === "electrical"
+						? "Electrical Service"
+						: pathname === "mechanical"
+							? "Mechanical Service"
+							: "Services"
+				}
 				backgroundImageHref={
-					isElectrical ? "/images/electrical.webp" : "/images/mechanical.webp"
+					pathname === "electrical"
+						? "/images/electrical.webp"
+						: pathname === "mechanical"
+							? "/images/mechanical.webp"
+							: "/images/services.webp"
 				}
 				backgroundImageAlt={
 					isElectrical
@@ -29,7 +35,7 @@ const Layout = ({ children }: ServiceLayoutProps) => {
 				<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
 					<div className="space-y-1">
 						<Link
-							href="electrical"
+							href="/services/electrical"
 							className={`block w-full p-2 text-sm font-medium rounded-md ${
 								pathname === "electrical"
 									? "bg-primary-50 text-black"
@@ -39,7 +45,7 @@ const Layout = ({ children }: ServiceLayoutProps) => {
 							Electrical Service
 						</Link>
 						<Link
-							href="mechanical"
+							href="/services/mechanical"
 							className={`block w-full p-2 text-sm font-medium rounded-md ${
 								pathname === "mechanical"
 									? "bg-primary-50 text-black"

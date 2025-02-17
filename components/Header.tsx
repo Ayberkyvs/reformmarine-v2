@@ -29,9 +29,9 @@ const Header = () => {
 							<NavMenu items={navData.items} isMobile={true} className="mt-5" />
 							<Socials
 								links={socialLinks}
-								className="flex md:hidden text-xl gap-2 text-black px-5 mt-4"
+								className="flex md:hidden text-xl gap-2 text-black px-5 my-4"
 							/>
-							<div className="bg-primary-50 w-full p-4 rounded-md mt-auto">
+							<div className="bg-primary-50 w-full p-4 rounded-md mt-auto mb-4">
 								<Yavas className="place-self-end" />
 							</div>
 						</div>

@@ -31,7 +31,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 						<Menu className="h-6 w-6" />
 					</Button>
 				</SheetTrigger>
-				<SheetContent className="z-[999] w-full">
+				<SheetContent className="z-[999] w-full overflow-y-auto">
 					<SheetTitle className="sr-only">Menu</SheetTitle>
 					{children}
 				</SheetContent>
