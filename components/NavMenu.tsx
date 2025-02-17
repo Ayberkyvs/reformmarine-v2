@@ -119,7 +119,7 @@ const NavMenu: React.FC<NavMenuProps> = ({
 							<>
 								<NavigationMenuTrigger>{item.name}</NavigationMenuTrigger>
 								<NavigationMenuContent>
-									<ul className="grid gap-3 p-4 w-[400px] sm:w-[500px] sm:grid-cols-2 lg:w-[600px]">
+									<ul className="grid gap-3 p-2 w-[400px] sm:w-[500px] sm:grid-cols-2 lg:w-[600px]">
 										{item.items?.map((dropdownItem) => (
 											<li key={dropdownItem.name}>
 												<NavigationMenuLink asChild>

@@ -13,22 +13,22 @@ const HeroWithBreadcrumb = ({
 	title: string;
 	backgroundImageHref: string;
 	backgroundImageAlt: string;
-	color: "primary" | "accent" | "white" | "black";
+	color: string;
 }) => {
 	const pathname = usePathname().split("/").filter(Boolean);
-	console.log(pathname);
 	const colorClassName = `text-${color}`;
 	return (
 		<>
 			<section className="w-full">
 				<div className="relative flex flex-col items-start justify-center w-full aspect-video lg:aspect-[16/6]">
 					<Image
-						src={backgroundImageHref}
+						src={backgroundImageHref || "/placeholder.svg"}
 						alt={backgroundImageAlt}
 						fill
 						className="z-[-1] object-cover"
 					/>
-					<div className="layout">
+					<div className="absolute inset-0 bg-black opacity-50 z-[0]"></div>
+					<div className="layout relative z-[1]">
 						<h1 className={cn("h2 sm:h1 font-semibold", colorClassName)}>
 							{title}
 						</h1>

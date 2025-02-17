@@ -5,7 +5,7 @@ import SectionHeading from "../../components/SectionHeading";
 import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 import FadeIn from "@/components/animations/FadeIn";
 import AboutUs from "@/components/AboutUs";
-import { benefits, services } from "@/lib/data";
+import { benefits, stickyScrollData } from "@/lib/data";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -113,7 +113,7 @@ const Home = () => {
 						title="Engineering Services"
 						description="Reform Marine is a company that provides service to ship engine and electrical equipment with its team specialized in the maritime. Our aim is to increase the service quality in the maritime and extend the service life of the system."
 					/>
-					<StickyScroll content={services} />
+					<StickyScroll content={stickyScrollData} />
 				</div>
 			</section>
 		</>
