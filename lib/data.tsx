@@ -94,7 +94,7 @@ const stickyScrollData = [
 				src="/images/electrical_scroll.webp"
 				alt="Image"
 				fill
-				className="h-full w-full"
+				className="size-full"
 			/>
 		),
 	},
@@ -107,7 +107,7 @@ const stickyScrollData = [
 				src="/images/mechanical_scroll.webp"
 				alt="Image"
 				fill
-				className="h-full w-full"
+				className="size-full"
 			/>
 		),
 	},
@@ -120,7 +120,7 @@ const stickyScrollData = [
 				src="/images/sparepart_scroll.webp"
 				alt="Image"
 				fill
-				className="h-full w-full"
+				className="size-full"
 			/>
 		),
 	},
@@ -133,7 +133,7 @@ const stickyScrollData = [
 				src="/images/products_scroll.webp"
 				alt="Image"
 				fill
-				className="h-full w-full"
+				className="size-full"
 			/>
 		),
 	},

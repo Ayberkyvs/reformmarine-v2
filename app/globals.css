@@ -81,6 +81,12 @@ body::-webkit-scrollbar-thumb {
   .inner-header {
     @apply flex justify-between items-center h-full;
   }
+  .hero {
+    @apply w-full;
+  }
+  .about {
+    @apply w-full;
+  }
   .benefits {
     @apply w-full bg-primary-50 min-h-[500px] h-fit flex flex-col justify-center items-center;
   }

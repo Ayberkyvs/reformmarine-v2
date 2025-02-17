@@ -1,12 +1,6 @@
 import type { Stat } from "@/types";
 
-const Stats = ({
-	stats,
-	variant = "default",
-}: {
-	stats: Stat[];
-	variant: string;
-}) => {
+const Stats = ({ stats }: { stats: Stat[] }) => {
 	return (
 		<div className="grid xs:grid-cols-[1fr_1fr_1fr] gap-5 w-full">
 			{stats.map((stat, index: number) => (

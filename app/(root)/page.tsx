@@ -44,7 +44,7 @@ const Home = () => {
 							width={1300}
 							height={800}
 							objectFit="cover"
-							className="relative w-full h-full rounded-lg"
+							className="relative size-full rounded-lg"
 						/>
 						<div className="absolute bottom-0 flex items-center justify-center md:justify-between w-full h-[70px] md:h-[90px] px-5 bg-black/60 backdrop-blur-sm">
 							<div className="flex items-center justify-between">
@@ -87,7 +87,7 @@ const Home = () => {
 								delay={0.2 + index * 0.2}
 								duration={0.8}
 								direction="left"
-								className="w-full h-full flex"
+								className="size-full flex"
 								key={index}
 							>
 								<div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-start justify-start text-left border-neutral-100 border gap-2">

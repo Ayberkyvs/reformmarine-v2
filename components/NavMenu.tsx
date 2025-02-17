@@ -90,7 +90,7 @@ const NavMenu: React.FC<NavMenuProps> = ({
 													<h6 className="text-base font-medium mb-1">
 														{dropdownItem.name}
 													</h6>
-													<p className="text-sm text-muted-foreground">
+													<p className="text-sm text-foreground-muted">
 														{dropdownItem.description}
 													</p>
 												</Link>
@@ -157,7 +157,7 @@ const NavMenu: React.FC<NavMenuProps> = ({
 														<h6 className="mb-2 text-lg font-medium">
 															{dropdownItem.name}
 														</h6>
-														<p className="small leading-tight text-muted-foreground">
+														<p className="small leading-tight text-foreground-muted">
 															{dropdownItem.description}
 														</p>
 													</Link>

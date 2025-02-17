@@ -41,7 +41,7 @@ export default function Error({
 						onClick={reset}
 						className="mt-8 inline-flex items-center px-4 py-2 border border-transparent text-base rounded-md text-black bg-neutral-200 hover:bg-neutral-300 hover:text-black"
 					>
-						<RefreshCcw className="mr-2 h-4 w-4" />
+						<RefreshCcw className="mr-2 size-4" />
 						Tekrar Dene
 					</Button>
 				</motion.div>

@@ -28,7 +28,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
 			<Sheet open={open} onOpenChange={setOpen}>
 				<SheetTrigger asChild>
 					<Button variant="outline" size="icon">
-						<Menu className="h-6 w-6" />
+						<Menu className="size-6" />
 					</Button>
 				</SheetTrigger>
 				<SheetContent className="z-[999] w-full overflow-y-auto">

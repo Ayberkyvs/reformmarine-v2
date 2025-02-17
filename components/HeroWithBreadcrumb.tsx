@@ -27,7 +27,7 @@ const HeroWithBreadcrumb = ({
 						fill
 						className="z-[-1] object-cover"
 					/>
-					<div className="absolute inset-0 bg-black opacity-50 z-[0]"></div>
+					<div className="absolute inset-0 bg-black opacity-50 z-0"></div>
 					<div className="layout relative z-[1]">
 						<h1 className={cn("h2 sm:h1 font-semibold", colorClassName)}>
 							{title}

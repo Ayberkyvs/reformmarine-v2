@@ -51,7 +51,7 @@ const AboutUsSection = ({ ...props }: AboutUsSectionProps) => {
 						alt={imageAlt}
 						width={640}
 						height={360}
-						className="w-full h-full aspect-video"
+						className="size-full aspect-video"
 					/>
 				</FadeIn>
 			</div>

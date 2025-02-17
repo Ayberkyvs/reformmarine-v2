@@ -4,7 +4,6 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion";
-import { ChevronRight } from "lucide-react";
 
 interface ServiceItem {
 	title: string;
