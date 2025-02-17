@@ -6,8 +6,31 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+	title: "Services",
+	description:
+		"Reform Marine activity is providing mechanical and electrical service for ship and supplying spare parts. Our goal is to ensure safety and satisfaction in maritime operations by delivering high-quality service and a wide range of products to our customers in a timely and reliable manner.",
+	openGraph: {
+		title: "Services",
+		description:
+			"Reform Marine activity is providing mechanical and electrical service for ship and supplying spare parts. Our goal is to ensure safety and satisfaction in maritime operations by delivering high-quality service and a wide range of products to our customers in a timely and reliable manner.",
+		type: "website",
+		images: [
+			{
+				url: "https://reformmarine.com/images/services.webp",
+				width: 1200,
+				height: 630,
+				alt: "Services",
+			},
+		],
+		url: "https://reformmarine.com/services",
+	},
+};
+
 const ServiceCard = ({
 	title,
 	description,
