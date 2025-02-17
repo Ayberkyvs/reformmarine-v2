@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import Image from "next/image";
 import Yavas from "./ui/ayberk-yavas";
 import Socials from "./Socials";
 import { socialLinks } from "@/lib/data";
@@ -11,7 +10,9 @@ const Footer = () => {
 				<div className="layout !py-6">
 					<div className="flex flex-col gap-5 sm:flex-row sm:justify-between sm:items-center sm:gap-0">
 						<div className="flex flex-col gap-2">
-							<Logo className="text-white w-[120px] h-[63px]" />
+							<Link href="/" scroll>
+								<Logo className="text-white w-[120px] h-[63px]" />
+							</Link>
 							<span className="small text-white">
 								Your Reliable Service in the Maritime
 							</span>

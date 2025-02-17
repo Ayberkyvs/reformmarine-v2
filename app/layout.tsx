@@ -53,7 +53,7 @@ export default function RootLayout({
 				<meta name="apple-mobile-web-app-title" content="Reform" />
 			</Head>
 			<body
-				className={`${poppins.variable} ${montserrat.className} antialiased`}
+				className={`${poppins.variable} ${montserrat.className} antialiased scroll-smooth`}
 			>
 				{children}
 			</body>
