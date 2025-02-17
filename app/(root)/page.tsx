@@ -5,34 +5,10 @@ import SectionHeading from "../../components/SectionHeading";
 import { StickyScroll } from "../../components/ui/sticky-scroll-reveal";
 import Stats from "@/components/Stats";
 import FadeIn from "@/components/animations/FadeIn";
+import AboutUs from "@/components/AboutUs";
+import { benefits } from "@/lib/data";
 
 const Home = () => {
-	const benefits = [
-		{
-			icon: "/icons/quality.svg",
-			title: "Quality",
-			description:
-				"Quality is the standardization of certain customer expectations as a result of a product and service meeting certain standards.",
-		},
-		{
-			icon: "/icons/effective.svg",
-			title: "Cost-Effective",
-			description:
-				"By supplying our products from the first supplier, our customers are provided cost-effective.",
-		},
-		{
-			icon: "/icons/innovative.svg",
-			title: "Innovative Products",
-			description:
-				"It is aimed to ensure long-lasting operation of the systems by providing system upgrades using innovative products.",
-		},
-		{
-			icon: "/icons/expertise.svg",
-			title: "Expertise",
-			description:
-				"With our experienced service engineers, we provide result-oriented services by accurately identifying the needs of the vessel.",
-		},
-	];
 	const services = [
 		{
 			title: "Electrical Service",
@@ -86,11 +62,6 @@ const Home = () => {
 				/>
 			),
 		},
-	];
-	const statsData = [
-		{ value: "500+", label: "Customers" },
-		{ value: "1.000+", label: "Products" },
-		{ value: "8+", label: "Years Experience" },
 	];
 
 	return (
@@ -184,26 +155,7 @@ const Home = () => {
 				</div>
 			</section>
 			<section className="aboutus">
-				<div className="layout gap-5 grid grid-cols-1 lg:grid-cols-[1fr_1fr]">
-					<div className="flex flex-col gap-5">
-						<SectionHeading
-							title="Reform Marine"
-							subtitle="ABOUT US"
-							description="Reform Marine  activity is providing mechanical and electrical service for ship and supplying spare parts. Our goal is to ensure safety and satisfaction in maritime operations by delivering high-quality service and a wide range of products to our customers in a timely and reliable manner.With our expert team and wide range of services, we offer fast and reliable solutions to all kinds of maritime needs of our customers. Reform Marine is proud to be a reliable service in the maritime world. We constantly improve ourselves and follow innovative technologies to understand the needs of our customers and offer them the most suitable solutions.
-Reform Marine is a company that set out with the mission of providing innovative and high-quality solutions to the maritime sector. 
-"
-						/>
-						<Stats stats={statsData} variant="default" />
-					</div>
-					<FadeIn direction="left" delay={0.3} duration={0.8}>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12076.489097905895!2d29.312066261429493!3d40.825277835552306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadd7659685b97%3A0x9f8ad867e6e6cc0e!2sReform%20Marine!5e0!3m2!1str!2str!4v1739734303765!5m2!1str!2str"
-							loading="lazy"
-							className="size-full min-h-[300px]"
-							title="Reform Marine Location"
-						></iframe>
-					</FadeIn>
-				</div>
+				<AboutUs />
 			</section>
 			<section className="services">
 				<div className="layout flex flex-col gap-[50px]">
