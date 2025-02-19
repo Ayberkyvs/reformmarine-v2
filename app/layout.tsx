@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
-import "./globals.css";
-import Head from "next/head";
+import "easymde/dist/easymde.min.css";
 
 const poppins = Poppins({
 	variable: "--font-poppins",

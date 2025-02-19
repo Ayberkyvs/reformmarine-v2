@@ -4,7 +4,9 @@ import Link from "next/link";
 import HeroWithBreadcrumb from "@/components/HeroWithBreadcrumb";
 import { usePathname } from "next/navigation";
 
-const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+const ServiceLayout = ({
+	children,
+}: Readonly<{ children: React.ReactNode }>) => {
 	const pathname = usePathname().split("/").filter(Boolean)[1];
 	const isElectrical = pathname === "electrical";
 	return (
@@ -32,8 +34,8 @@ const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 				color="white"
 			/>
 			<div className="layout">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-					<div className="space-y-1">
+				<div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+					<aside className="space-y-1 lg:col-span-2">
 						<Link
 							href="/services/electrical"
 							className={`block w-full p-2 text-sm font-medium rounded-md ${
@@ -54,13 +56,13 @@ const Layout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 						>
 							Mechanical Service
 						</Link>
-					</div>
+					</aside>
 
-					<div className="md:col-span-3">{children}</div>
+					<div className="lg:col-span-10">{children}</div>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default Layout;
+export default ServiceLayout;
