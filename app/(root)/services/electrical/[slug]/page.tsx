@@ -8,8 +8,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 	const slug = (await params)?.slug || "";
 
 	const serviceData = await client.fetch(getServiceDetailsBySlug, { slug });
-	const { category } = serviceData;
-	const relatedServices = await client.fetch(getRelatedServices, { category });
+	// const { category } = serviceData;
+	// const relatedServices = await client.fetch(getRelatedServices, { category });
 	return (
 		<>
 			<ServiceDetail data={serviceData} />
