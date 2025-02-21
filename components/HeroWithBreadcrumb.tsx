@@ -16,7 +16,6 @@ const HeroWithBreadcrumb = ({
   color: string;
 }) => {
   const pathname = usePathname().split("/").filter(Boolean);
-  const colorClassName = `text-${color}`;
   return (
     <>
       <section className="w-full">
@@ -29,10 +28,8 @@ const HeroWithBreadcrumb = ({
           />
           <div className="absolute inset-0 z-0 bg-black opacity-50"></div>
           <div className="layout relative z-[1]">
-            <h1 className={cn("h2 sm:h1 font-semibold", colorClassName)}>
-              {title}
-            </h1>
-            <BreadCrumb pathname={pathname} className={colorClassName} />
+            <h1 className={cn("h2 sm:h1 font-semibold", color)}>{title}</h1>
+            <BreadCrumb pathname={pathname} className={color} />
           </div>
         </div>
       </section>
