@@ -13,6 +13,9 @@ import React, { Suspense } from "react";
 import RelatedServices from "../../../../../components/RelatedServices";
 import Loader from "@/components/Loader";
 
+export const experimental_ppr = true;
+export const revalidate = 120;
+
 export async function generateMetadata({
   params,
 }: {

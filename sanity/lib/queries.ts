@@ -2,6 +2,7 @@ import { defineQuery } from "next-sanity";
 
 const getServicesByCategory = defineQuery(`
     *[_type == "service" && category == $category] | order(title desc) {
+        _id,
         title,
         description,
         slug,
@@ -11,6 +12,7 @@ const getServicesByCategory = defineQuery(`
 
 const getRelatedServices = defineQuery(`
     *[_type == "service" && category == $category && slug.current != $slug] [0...$number] {
+        _id,
         title,
         description,
         image,

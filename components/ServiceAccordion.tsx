@@ -12,10 +12,10 @@ import { ArrowRight } from "lucide-react";
 export function ServiceAccordion({ services }: { services: Service[] }) {
   return (
     <Accordion type="single" collapsible className="space-y-2">
-      {services.map((service, index: number) => (
+      {services.map((service) => (
         <AccordionItem
           key={service._id}
-          value={`item-${index}`}
+          value={`item-${service._id}`}
           className="rounded-md border bg-white"
         >
           <AccordionTrigger className="px-4 hover:no-underline">

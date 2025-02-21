@@ -4,6 +4,7 @@ import { getServicesByCategory } from "@/sanity/lib/queries";
 import type { Metadata } from "next";
 import NoFoundAlert from "../../../../components/NoFoundAlert";
 
+export const revalidate = 120;
 export const metadata: Metadata = {
   title: "Mechanical Service",
   description:
