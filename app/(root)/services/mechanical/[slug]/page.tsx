@@ -1,4 +1,3 @@
-import { ImageCard } from "@/components/ImageCard";
 import ServiceDetail from "@/components/ServiceDetail";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -8,9 +7,8 @@ import {
 } from "@/sanity/lib/queries";
 import type { Service } from "@/sanity/types";
 import type { Metadata } from "next";
-import Link from "next/link";
 import React, { Suspense } from "react";
-import RelatedServices from "../../../../../components/RelatedServices";
+import RelatedServices from "@/components/RelatedServices";
 import Loader from "@/components/Loader";
 
 export const experimental_ppr = true;
@@ -64,27 +62,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         </Suspense>
         <Suspense fallback={<Loader className="h-[300px]" />}>
           {RelatedServices.length > 0 && (
-            <>
-              <hr className="w-full" />
-              <h5 className="h5 font-semibold">Users also viewed</h5>
-              <div className="grid w-full grid-cols-1 gap-5 xs:grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr_1fr_1fr]">
-                {relatedServices?.map((service: Service) => (
-                  <React.Fragment key={service._id}>
-                    <Link href={service.slug.current}>
-                      <ImageCard
-                        src={
-                          urlFor(service.image).width(500).height(500).url() ||
-                          "/images/placeholder.webp"
-                        }
-                        alt={service.title}
-                        caption={service.title}
-                        className="size-full"
-                      />
-                    </Link>
-                  </React.Fragment>
-                ))}
-              </div>
-            </>
+            <RelatedServices data={relatedServices} />
           )}
         </Suspense>
       </div>

@@ -1,23 +1,33 @@
-const RelatedServices = ({ data }: { data: any }) => {
-	return (
-		<>
-			<div className="space-y-6">
-				<h2 className="text-2xl font-bold tracking-tight">
-					Users who viewed this also viewed
-				</h2>
-				{/* <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-					{relatedProducts.map((image: any, index: number) => (
-						<ImageCard
-							key={index}
-							src={image.src || "/placeholder.svg"}
-							alt={image.alt}
-							caption={image.caption}
-						/>
-					))}
-				</div> */}
-			</div>
-		</>
-	);
+import type { Service } from "@/sanity/types";
+import Link from "next/link";
+import React from "react";
+import { ImageCard } from "./ImageCard";
+import { urlFor } from "@/sanity/lib/image";
+
+const RelatedServices = ({ data }: { data: Service[] }) => {
+  return (
+    <>
+      <hr className="w-full" />
+      <h5 className="h5 font-semibold">Users also viewed</h5>
+      <div className="grid w-full grid-cols-1 gap-5 xs:grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr_1fr_1fr]">
+        {data.map((service: Service) => (
+          <React.Fragment key={service._id}>
+            <Link href={service.slug.current}>
+              <ImageCard
+                src={
+                  urlFor(service.image).width(500).height(500).url() ||
+                  "/images/placeholder.webp"
+                }
+                alt={service.title}
+                caption={service.title}
+                className="size-full"
+              />
+            </Link>
+          </React.Fragment>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default RelatedServices;
