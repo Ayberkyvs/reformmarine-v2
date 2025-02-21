@@ -56,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   });
   return (
     <>
-      <div className="flex w-full flex-col gap-5">
+      <div className="flex h-fit w-full flex-col gap-5">
         <Suspense fallback={<Loader className="h-[500px]" />}>
           <ServiceDetail data={serviceData} />
         </Suspense>

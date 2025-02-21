@@ -9,7 +9,7 @@ const RelatedServices = ({ data }: { data: Service[] }) => {
     <>
       <hr className="w-full" />
       <h5 className="h5 font-semibold">Users also viewed</h5>
-      <div className="grid w-full grid-cols-1 gap-5 xs:grid-cols-[1fr_1fr] md:grid-cols-[1fr_1fr_1fr_1fr]">
+      <div className="grid w-full grid-cols-[1fr_1fr] gap-5 md:grid-cols-[1fr_1fr_1fr_1fr]">
         {data.map((service: Service) => (
           <React.Fragment key={service._id}>
             <Link href={service.slug.current}>
