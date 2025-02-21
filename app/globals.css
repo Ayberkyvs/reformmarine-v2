@@ -19,11 +19,9 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-poppins);
   line-height: 130%;
-  color: var(--foreground);
 }
 p, span {
   line-height: 150%;
-  color: var(--foreground-muted);
 }
 body::-webkit-scrollbar {
   width: var(--sb-size)
@@ -46,25 +44,28 @@ body::-webkit-scrollbar-thumb {
 }
 @layer base {
   .h1 {
-    @apply text-[61px] leading-[130%];
+    @apply text-[61px] leading-[130%] text-foreground;
   }
   .h2 {
-    @apply text-[49px] leading-[130%];
+    @apply text-[49px] leading-[130%] text-foreground;
   }
   .h3 {
-    @apply text-[39px] leading-[130%];
+    @apply text-[39px] leading-[130%] text-foreground;
   }
   .h4 {
-    @apply text-[31px] leading-[130%];
+    @apply text-[31px] leading-[130%] text-foreground;
   }
   .h5 {
-    @apply text-[25px] leading-[130%];
+    @apply text-[25px] leading-[130%] text-foreground;
   }
   .h6 {
-    @apply text-[20px] leading-[130%];
+    @apply text-[20px] leading-[130%] text-foreground;
   }
   .p {
-    @apply text-[16px] leading-[150%] break-words text-ellipsis;
+    @apply text-[16px] leading-[150%] break-words text-ellipsis text-foreground-muted;
+  }
+  .span {
+    @apply leading-[150%] text-foreground-muted;
   }
   .small {
     @apply text-[13px] leading-[150%] text-foreground-muted;
