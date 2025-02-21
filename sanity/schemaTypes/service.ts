@@ -37,7 +37,7 @@ export const service = defineType({
       title: "Short Description",
       placeholder: "Enter a short description",
       type: "string",
-      validation: (Rule) => Rule.required().min(50).max(300),
+      validation: (Rule) => Rule.required().min(130).max(350),
     }),
     defineField({
       name: "content",

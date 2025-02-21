@@ -7,14 +7,15 @@ import { cn } from "@/lib/utils";
 import Socials from "./Socials";
 import Yavas from "./ui/ayberk-yavas";
 import { socialLinks } from "@/lib/data";
+import HeaderAnimation from "./animations/HeaderAnimation";
 
 const Header = () => {
   return (
     <>
-      <header className="header">
+      <HeaderAnimation>
         <div className={cn("inner-header layout !py-0")}>
           <Link href="/">
-            <Logo className="h-[58px] w-[110px] text-primary-500" />
+            <Logo className="h-[55px] w-[97px] text-primary-500 md:h-[60px] md:w-[106px]" />
           </Link>
           <NavMenu items={navData.items} className="hidden md:flex" />
           <Socials
@@ -37,7 +38,7 @@ const Header = () => {
             </div>
           </HamburgerMenu>
         </div>
-      </header>
+      </HeaderAnimation>
     </>
   );
 };

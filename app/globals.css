@@ -13,7 +13,7 @@
 
   /* Scroll Bar */
   --sb-track-color: var(--background);
-  --sb-thumb-color: var(--foreground);
+  --sb-thumb-color: var(--primary);
   --sb-size: 5px;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -77,13 +77,13 @@ body::-webkit-scrollbar-thumb {
 
 @layer components {
   .header {
-    @apply fixed top-0 w-full h-[80px] md:h-[90px] bg-background z-[998] border-b border-neutral-300 shadow-sm;
+    @apply fixed top-0 w-full bg-background z-[998] border-b border-neutral-300;
   }
   .inner-header {
     @apply flex justify-between items-center h-full;
   }
   .hero {
-    @apply w-full mt-[80px] md:mt-[90px];
+    @apply w-full mt-[90px];
   }
   .about {
     @apply w-full;
@@ -101,7 +101,7 @@ body::-webkit-scrollbar-thumb {
     @apply flex flex-col justify-center items-start;
   }
   .herowithbreadcrumb {
-    @apply mt-[80px] md:mt-[90px];
+    @apply mt-[90px];
   }
   .footer {
     @apply w-full bg-primary-800 h-fit;
