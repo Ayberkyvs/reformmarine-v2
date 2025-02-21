@@ -18,7 +18,7 @@ const HeroWithBreadcrumb = ({
   const pathname = usePathname().split("/").filter(Boolean);
   return (
     <>
-      <section className="w-full">
+      <section className="herowithbreadcrumb w-full">
         <div className="relative flex aspect-video w-full flex-col items-start justify-center lg:aspect-[16/6]">
           <Image
             src={backgroundImageHref || "/placeholder.svg"}

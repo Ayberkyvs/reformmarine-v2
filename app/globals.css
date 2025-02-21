@@ -77,13 +77,13 @@ body::-webkit-scrollbar-thumb {
 
 @layer components {
   .header {
-    @apply sticky top-0 w-full h-[90px] bg-background shadow-md z-[998];
+    @apply fixed top-0 w-full h-[80px] md:h-[90px] bg-background z-[998] border-b border-neutral-300 shadow-sm;
   }
   .inner-header {
     @apply flex justify-between items-center h-full;
   }
   .hero {
-    @apply w-full;
+    @apply w-full mt-[80px] md:mt-[90px];
   }
   .about {
     @apply w-full;
@@ -99,6 +99,9 @@ body::-webkit-scrollbar-thumb {
   }
   .section-heading {
     @apply flex flex-col justify-center items-start;
+  }
+  .herowithbreadcrumb {
+    @apply mt-[80px] md:mt-[90px];
   }
   .footer {
     @apply w-full bg-primary-800 h-fit;

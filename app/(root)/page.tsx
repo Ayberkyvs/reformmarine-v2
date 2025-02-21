@@ -21,7 +21,7 @@ const Home = () => {
             <HighlightedHeading
               text="Your Reliable Service in the Maritime"
               highlightedWord="Service"
-              className="h2 sm:h1 text-center font-semibold uppercase lg:col-span-7 lg:text-left"
+              className="h3 sm:h1 text-center font-semibold uppercase lg:col-span-7 lg:text-left"
             />
             <div className="text-center lg:col-span-4 lg:col-end-13">
               <p className="p">
