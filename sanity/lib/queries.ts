@@ -1,15 +1,16 @@
 import { defineQuery } from "next-sanity";
 
 const getServicesByCategory = defineQuery(`
-    *[_type == "services" && category == $category] | order(title desc) {
+    *[_type == "service" && category == $category] | order(title desc) {
         title,
         description,
         slug,
+        category,
     }
 `);
 
 const getRelatedServices = defineQuery(`
-    *[_type == "services" && category == $category && slug.current != $slug] | order(title desc) [$number] {
+    *[_type == "service" && category == $category && slug.current != $slug] [0...$number] {
         title,
         description,
         image,
@@ -18,7 +19,7 @@ const getRelatedServices = defineQuery(`
 `);
 
 const getServiceDetailsBySlug = defineQuery(`
-    *[_type == "services" && slug.current == $slug] [0]
+    *[_type == "service" && slug.current == $slug] [0]
 `);
 
 export { getServicesByCategory, getRelatedServices, getServiceDetailsBySlug };
