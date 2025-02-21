@@ -9,6 +9,7 @@ export const service = defineType({
       name: "image",
       title: "Service Image",
       type: "image",
+      validation: (Rule) => Rule.required(),
       options: {
         hotspot: true,
       },
