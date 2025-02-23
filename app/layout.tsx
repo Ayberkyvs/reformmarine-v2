@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Montserrat } from "next/font/google";
 import "./globals.css";
-import "easymde/dist/easymde.min.css";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -56,7 +55,7 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${montserrat.className} scroll-smooth antialiased`}
       >
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
