@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import React, { Suspense } from "react";
 import RelatedServices from "@/components/RelatedServices";
 import Loader from "@/components/Loader";
+import { redirect } from "next/navigation";
 
 export const experimental_ppr = true;
 export const revalidate = 120;
@@ -48,6 +49,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const serviceData: Service = await client.fetch(getServiceDetailsBySlug, {
     slug,
   });
+  if (!serviceData) redirect("/404");
   const { category } = serviceData;
   const relatedServices: Service[] = await client.fetch(getRelatedServices, {
     category,
