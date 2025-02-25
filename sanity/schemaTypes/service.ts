@@ -1,9 +1,11 @@
+import { Ship } from "lucide-react";
 import { defineField, defineType } from "sanity";
 
 export const service = defineType({
   name: "service",
   title: "Service",
   type: "document",
+  icon: Ship,
   fields: [
     defineField({
       name: "image",
