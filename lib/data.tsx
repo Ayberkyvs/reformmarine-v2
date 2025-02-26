@@ -8,7 +8,7 @@ import Image from "next/image";
 const navData = {
   items: [
     { name: "Home", href: "/", isDisabled: false },
-    { name: "Products", href: "/products", isDisabled: true },
+    { name: "Products", href: "/products", isDisabled: false },
     {
       name: "Services",
       items: [
