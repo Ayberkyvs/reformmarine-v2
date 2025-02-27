@@ -1,7 +1,7 @@
 import { Ship } from "lucide-react";
 import { defineField, defineType } from "sanity";
 
-export const service = defineType({
+export default defineType({
   name: "service",
   title: "Service",
   type: "document",
