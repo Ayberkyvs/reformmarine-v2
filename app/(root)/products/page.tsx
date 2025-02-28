@@ -3,6 +3,8 @@ import ProductSidebar from "@/components/ProductSidebar";
 import HeroWithBreadcrumb from "@/components/HeroWithBreadcrumb";
 import { getCategoriesQuery, getProductsQuery } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
+import { Suspense } from "react";
+import LoaderComponent from "@/components/Loader";
 
 export const revalidate = 60;
 
@@ -21,9 +23,13 @@ const Page = async () => {
       />
       <div className="w-full">
         <div className="layout flex flex-col gap-5 xs:flex-row">
-          <ProductSidebar categories={categories} />
+          <Suspense fallback={<LoaderComponent className="h-fit w-full" />}>
+            <ProductSidebar categories={categories} />
+          </Suspense>
           <main className="flex-1">
-            <ProductGrid initialProducts={products} />
+            <Suspense fallback={<LoaderComponent className="h-fit w-full" />}>
+              <ProductGrid initialProducts={products} />
+            </Suspense>
           </main>
         </div>
       </div>

@@ -118,7 +118,7 @@ const ProductGrid = ({ initialProducts }: ProductGridProps) => {
           ))}
       </div>
 
-      {products.length <= 0 && (
+      {products.length <= 0 && !loading && (
         <NotFoundAlert
           title="No products found"
           description="Sorry, we couldn't find any products matching your search."
