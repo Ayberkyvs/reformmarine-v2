@@ -9,6 +9,7 @@ import NotFoundAlert from "./NotFoundAlert";
 import Link from "next/link";
 import { Rocket, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import LoaderComponent from "./Loader";
 
 interface ProductGridProps {
   initialProducts: (Omit<Product, "categories"> & {
@@ -19,8 +20,10 @@ interface ProductGridProps {
 const ProductGrid = ({ initialProducts }: ProductGridProps) => {
   const searchParams = useSearchParams();
   const [products, setProducts] = useState(initialProducts || []);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     const search = searchParams.get("search");
     const sort = searchParams.get("sort");
     const categories = searchParams.get("categories")?.split(",");
@@ -59,6 +62,7 @@ const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     }
 
     setProducts(filteredProducts);
+    setLoading(false);
   }, [searchParams, initialProducts]);
 
   console.log(products);
@@ -66,6 +70,7 @@ const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     <>
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {products.length > 0 &&
+          !loading &&
           products.map((product) => (
             <Link
               href={`/products/${product.slug.current}`}
@@ -119,6 +124,8 @@ const ProductGrid = ({ initialProducts }: ProductGridProps) => {
           description="Sorry, we couldn't find any products matching your search."
         />
       )}
+
+      {loading && <LoaderComponent className="h-[300px] w-full" />}
     </>
   );
 };

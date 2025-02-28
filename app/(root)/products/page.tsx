@@ -1,9 +1,10 @@
 import ProductGrid from "@/components/ProductGrid";
 import ProductSidebar from "@/components/ProductSidebar";
-import React, { Suspense } from "react";
 import HeroWithBreadcrumb from "@/components/HeroWithBreadcrumb";
 import { getCategoriesQuery, getProductsQuery } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
+
+export const revalidate = 60;
 
 const Page = async () => {
   const [products, categories] = await Promise.all([
@@ -22,9 +23,7 @@ const Page = async () => {
         <div className="layout flex flex-col gap-5 xs:flex-row">
           <ProductSidebar categories={categories} />
           <main className="flex-1">
-            <Suspense>
-              <ProductGrid initialProducts={products} />
-            </Suspense>
+            <ProductGrid initialProducts={products} />
           </main>
         </div>
       </div>
