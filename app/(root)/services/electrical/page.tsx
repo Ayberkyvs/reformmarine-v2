@@ -2,7 +2,7 @@ import { ServiceAccordion } from "@/components/ServiceAccordion";
 import { client } from "@/sanity/lib/client";
 import { getServicesByCategory } from "@/sanity/lib/queries";
 import type { Metadata } from "next";
-import NoFoundAlert from "../../../../components/NoFoundAlert";
+import NotFoundAlert from "@/components/NotFoundAlert";
 
 export const revalidate = 120;
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ const Electrical = async () => {
       {electricalServices.length > 0 ? (
         <ServiceAccordion services={electricalServices} />
       ) : (
-        <NoFoundAlert
+        <NotFoundAlert
           title="No Electrical Services Found!"
           description="We are sorry, but there are no services available at the moment."
         />

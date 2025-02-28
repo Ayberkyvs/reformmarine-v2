@@ -4,7 +4,7 @@ import { ImageCard } from "./ImageCard";
 import DOMPurify from "isomorphic-dompurify";
 import { urlFor } from "@/sanity/lib/image";
 import type { Service } from "@/sanity/types";
-import NoFoundAlert from "./NoFoundAlert";
+import NotFoundAlert from "./NotFoundAlert";
 
 const ServiceDetail = async ({ data }: { data: Service }) => {
   const { title, content, image } = data;
@@ -36,7 +36,7 @@ const ServiceDetail = async ({ data }: { data: Service }) => {
           />
         </div>
       ) : (
-        <NoFoundAlert
+        <NotFoundAlert
           title="No Details Found!"
           description={`We are sorry, but there are no details about ${title} at the moment.`}
         />
