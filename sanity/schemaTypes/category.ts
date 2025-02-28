@@ -1,9 +1,11 @@
+import { ChartBarStacked } from "lucide-react";
 import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "category",
   title: "Category",
   type: "document",
+  icon: ChartBarStacked,
   fields: [
     defineField({
       name: "title",

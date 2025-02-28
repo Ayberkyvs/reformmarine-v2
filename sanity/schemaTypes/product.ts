@@ -1,9 +1,11 @@
+import { ScanBarcode } from "lucide-react";
 import { defineField, defineType } from "sanity";
 
 export default defineType({
   name: "product",
   title: "Product",
   type: "document",
+  icon: ScanBarcode,
   fields: [
     defineField({
       name: "title",
