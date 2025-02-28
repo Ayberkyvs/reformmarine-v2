@@ -5,8 +5,28 @@ import { getCategoriesQuery, getProductsQuery } from "@/sanity/lib/queries";
 import { client } from "@/sanity/lib/client";
 import { Suspense } from "react";
 import LoaderComponent from "@/components/Loader";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
+export const metadata: Metadata = {
+  title: "Products",
+  description:
+    "Extensive product selection, superior workmanship, fast turnaround and on-time delivery make us your one-stop shop.Regardless of brand, the close follow-up of each customer is at the heart of our offering.",
+  openGraph: {
+    title: "Products",
+    description:
+      "Extensive product selection, superior workmanship, fast turnaround and on-time delivery make us your one-stop shop.Regardless of brand, the close follow-up of each customer is at the heart of our offering.",
+    images: [
+      {
+        url: "/images/products.webp",
+        width: 1200,
+        height: 630,
+        alt: "Products",
+      },
+    ],
+    url: "https://reformmarine.com/products",
+  },
+};
 
 const Page = async () => {
   const [products, categories] = await Promise.all([
