@@ -131,7 +131,7 @@ Or deploy on platforms like Vercel or Netlify.
 
 ## ✍️ Authors <a name="authors"></a>
 
-- **[@ayberk](https://github.com/ayberk)** - Fullstack Developer
+- **[@Ayberkyvs](https://github.com/Ayberkyvs)** - Fullstack Developer
 
 ## 🎉 Acknowledgements <a name="acknowledgements"></a>
 
