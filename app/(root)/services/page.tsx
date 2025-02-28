@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     title: "Services",
     description:
       "Reform Marine activity is providing mechanical and electrical service for ship and supplying spare parts. Our goal is to ensure safety and satisfaction in maritime operations by delivering high-quality service and a wide range of products to our customers in a timely and reliable manner.",
-    type: "website",
     images: [
       {
         url: "https://reformmarine.com/images/services.webp",

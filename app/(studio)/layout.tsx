@@ -5,6 +5,7 @@ import Logo from "../../components/Logo";
 export const metadata: Metadata = {
   title: "Studio",
   description: "Studio page for Reform Marine",
+  robots: "noindex, nofollow",
 };
 
 export default function StudioLayout({

@@ -10,7 +10,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Marine Services",
+  openGraph: {
+    title: "Marine Services",
+  },
 };
 const Home = () => {
   return (

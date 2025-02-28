@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Electrical Service",
     description:
       "Reform Marine, as a company specialising in electrical systems maintenance and repair, offers tailor-made solutions to the maritime industry. Our professional teams optimise the travel experience by improving the safety and performance of vessels with electrical maintenance services.",
-    type: "website",
     images: [
       {
         url: "https://reformmarine.com/images/electrical.webp",

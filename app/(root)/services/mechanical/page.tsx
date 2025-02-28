@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     title: "Mechanical Service",
     description:
       "Reform Marine, as a company specialized senior engineer are perform to maintenance of ship mechanical services. This power includes engine maintenance and repair, maintenance of hydraulic systems,fuel system,quality of lubrication oil and also pneumatic equipment maintenance.",
-    type: "website",
     images: [
       {
         url: "https://reformmarine.com/images/mechanical.webp",
