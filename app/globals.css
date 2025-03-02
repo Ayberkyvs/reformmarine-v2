@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb {
     @apply fixed top-0 w-full bg-background z-[998] border-b border-neutral-300;
   }
   .inner-header {
-    @apply flex justify-between items-center h-full;
+    @apply flex justify-between items-center h-full w-full;
   }
   .hero {
     @apply w-full mt-[90px];
@@ -110,7 +110,7 @@ body::-webkit-scrollbar-thumb {
 
 @layer utilities {
   .layout {
-    @apply w-full max-w-screen-2xl mx-auto px-5 py-[50px] md:p-[50px] lg:p-[70px];
+    @apply w-full max-w-screen-2xl mx-auto px-5 py-[50px] md:p-[50px] lg:p-[70px] overflow-hidden;
   }
   .flex-center {
     @apply flex justify-center items-center;

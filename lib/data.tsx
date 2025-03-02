@@ -2,7 +2,8 @@ import GoogleMaps from "@/components/ui/google-map";
 import Instagram from "@/components/ui/instagram-logo";
 import LinkedIn from "@/components/ui/linkedin-logo";
 import WhatsApp from "@/components/ui/whatsapp-logo";
-import type { Benefit, SocialLink, Stat } from "@/types";
+import type { ActionButton, Benefit, SocialLink, Stat } from "@/types";
+import { Mail } from "lucide-react";
 import Image from "next/image";
 
 const navData = {
@@ -254,6 +255,22 @@ const services = {
     },
   ],
 };
+const actionButtons: ActionButton[] = [
+  {
+    id: "whatsapp",
+    label: "WhatsApp",
+    url: "https://wa.me/905546733676",
+    icon: <WhatsApp className="size-5"/>,
+    bgColor: "green",
+  },
+  {
+    id: "email",
+    label: "Email",
+    url: "mailto:info@reformmarine.com",
+    icon: <Mail className="size-5" />,
+    bgColor: "blue",
+  },
+]
 
 export {
   navData,
@@ -262,4 +279,5 @@ export {
   socialLinks,
   stickyScrollData,
   services,
+  actionButtons
 };

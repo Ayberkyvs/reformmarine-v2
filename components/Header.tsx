@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <>
       <HeaderAnimation>
-        <div className={cn("inner-header layout !py-0")}>
+        <div className={cn("inner-header layout !overflow-visible !py-0")}>
           <Link href="/">
             <Logo className="h-[55px] w-[97px] text-primary-500 md:h-[60px] md:w-[106px]" />
           </Link>
