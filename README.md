@@ -100,7 +100,7 @@ Or deploy on platforms like Vercel or Netlify.
 ## 📜 Packages Used <a name="packages-used"></a>
 
 ### Dependencies
-- `next` - v15.2.1
+- `next` - v15.2.1.Canary 
 - `react` - v19
 - `react-dom` - v19
 - `sanity` - v3
