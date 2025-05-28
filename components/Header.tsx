@@ -32,9 +32,7 @@ const Header = () => {
                 links={socialLinks}
                 className="my-4 flex gap-2 px-5 text-xl text-black md:hidden"
               />
-              <div className="mb-4 mt-auto w-full rounded-md bg-primary-50 p-4">
-                <Yavas className="place-self-end" />
-              </div>
+              <Yavas className="mt-auto place-self-center" />
             </div>
           </HamburgerMenu>
         </div>
