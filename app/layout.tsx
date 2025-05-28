@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     "Maritime Services",
     "Mechanical Service",
     "Electrical Service",
+    "Maritime",
+    "Maritime Services",
+    "Maritime Maintenance",
+    "Marine",
   ],
   robots: "index, follow",
 };
