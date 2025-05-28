@@ -47,7 +47,7 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="h-[40px] w-full bg-primary-50">
+        <div className="h-fit w-full bg-primary-50 py-4">
           <div className="layout flex h-full items-center justify-end !py-0">
             <Yavas />
           </div>
