@@ -66,7 +66,7 @@
     "isomorphic-dompurify": "^2.26.0",
     "lucide-react": "^0.476.0",
     "markdown-it": "^14.1.0",
-    "next": "^15.5.2",
+    "next": "15.5.1-canary.26",
     "next-sanity": "^9.12.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
