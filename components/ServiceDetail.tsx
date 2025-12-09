@@ -1,15 +1,19 @@
 import "server-only";
 import { parseMarkdown } from "@/lib/markdown";
 import { ImageCard } from "./ImageCard";
-import DOMPurify from "isomorphic-dompurify";
+import DOMPurify from "dompurify";
 import { urlFor } from "@/sanity/lib/image";
 import type { Service } from "@/sanity/types";
 import NotFoundAlert from "./NotFoundAlert";
+import { JSDOM } from "jsdom";
 
-const ServiceDetail = async ({ data }: { data: Service }) => {
+const window = new JSDOM("").window;
+const purify = DOMPurify(window);
+
+const ServiceDetail = ({ data }: { data: Service }) => {
   const { title, content, image } = data;
   const parsedContent = parseMarkdown(content?.toString() || "");
-  const clean = DOMPurify.sanitize(parsedContent, {
+  const clean = purify.sanitize(parsedContent, {
     ALLOWED_ATTR: ["style"],
   });
   return (

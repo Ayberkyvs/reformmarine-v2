@@ -4,10 +4,10 @@
 
 :root {
   --primary: #055195;
-  --secondary: #C4D6B0;
-  --accent: #E53D00;
+  --secondary: #c4d6b0;
+  --accent: #e53d00;
   --foreground: #080708;
-  --background: #FFFFFF;
+  --background: #ffffff;
   --foreground-muted: #404040;
   --radius: 0.5rem;
 
@@ -16,15 +16,21 @@
   --sb-thumb-color: var(--primary);
   --sb-size: 5px;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-poppins);
   line-height: 130%;
 }
-p, span {
+p,
+span {
   line-height: 150%;
 }
 body::-webkit-scrollbar {
-  width: var(--sb-size)
+  width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
@@ -38,8 +44,7 @@ body::-webkit-scrollbar-thumb {
 }
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
 @layer base {
@@ -62,7 +67,7 @@ body::-webkit-scrollbar-thumb {
     @apply text-[20px] leading-[130%] text-foreground;
   }
   .p {
-    @apply text-[16px] leading-[150%] break-words text-ellipsis text-foreground-muted;
+    @apply text-ellipsis break-words text-[16px] leading-[150%] text-foreground-muted;
   }
   .span {
     @apply leading-[150%] text-foreground-muted;
@@ -77,42 +82,42 @@ body::-webkit-scrollbar-thumb {
 
 @layer components {
   .header {
-    @apply fixed top-0 w-full bg-background z-[998] border-b border-neutral-300;
+    @apply fixed top-0 z-[998] w-full border-b border-neutral-300 bg-background;
   }
   .inner-header {
-    @apply flex justify-between items-center h-full w-full;
+    @apply flex h-full w-full items-center justify-between;
   }
   .hero {
-    @apply w-full mt-[90px];
+    @apply mt-[90px] w-full;
   }
   .about {
     @apply w-full;
   }
   .benefits {
-    @apply w-full bg-primary-50 min-h-[500px] h-fit flex flex-col justify-center items-center;
+    @apply flex h-fit min-h-[500px] w-full flex-col items-center justify-center bg-primary-50;
   }
   .aboutus {
-    @apply w-full h-fit;
+    @apply h-fit w-full;
   }
   .services {
-    @apply w-full h-fit;
+    @apply h-fit w-full;
   }
   .section-heading {
-    @apply flex flex-col justify-center items-start;
+    @apply flex flex-col items-start justify-center;
   }
   .herowithbreadcrumb {
     @apply mt-[90px];
   }
   .footer {
-    @apply w-full bg-primary-800 h-fit;
+    @apply h-fit w-full bg-primary-800;
   }
 }
 
 @layer utilities {
   .layout {
-    @apply w-full max-w-screen-2xl mx-auto px-5 py-[50px] md:p-[50px] lg:p-[70px] overflow-hidden;
+    @apply mx-auto w-full max-w-screen-2xl overflow-hidden px-5 py-[50px] md:p-[50px] lg:p-[70px];
   }
   .flex-center {
-    @apply flex justify-center items-center;
+    @apply flex items-center justify-center;
   }
 }

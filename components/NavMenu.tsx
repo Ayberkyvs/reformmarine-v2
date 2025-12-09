@@ -112,22 +112,17 @@ const NavMenu: React.FC<NavMenuProps> = ({
         {items.map((item: NavItem, index: number) => (
           <NavigationMenuItem key={item.name + index}>
             {item.href ? (
-              <Link
+              <NavigationMenuLink
                 href={!item.isDisabled ? item.href : ""}
-                legacyBehavior
-                passHref
+                className={cn(navigationMenuTriggerStyle(), {
+                  "cursor-not-allowed text-neutral-600 hover:bg-transparent hover:text-neutral-600 focus:bg-transparent focus:text-neutral-600":
+                    item.isDisabled,
+                })}
+                title={item.name}
+                active={pathname === item.href}
               >
-                <NavigationMenuLink
-                  className={cn(navigationMenuTriggerStyle(), {
-                    "cursor-not-allowed text-neutral-600 hover:bg-transparent hover:text-neutral-600 focus:bg-transparent focus:text-neutral-600":
-                      item.isDisabled,
-                  })}
-                  title={item.name}
-                  active={pathname === item.href}
-                >
-                  {item.name}
-                </NavigationMenuLink>
-              </Link>
+                {item.name}
+              </NavigationMenuLink>
             ) : (
               <>
                 <NavigationMenuTrigger disabled={item.isDisabled}>

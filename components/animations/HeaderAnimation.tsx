@@ -18,7 +18,8 @@ const HeaderAnimation = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.header
       className={cn("header", {
-        "glass-effect shadow-sm": scrollY.get() > 50,
+        "glass-effect border-b border-neutral-300 bg-background shadow-sm":
+          scrollY.get() > 50,
       })}
       animate={{ height }}
       initial={{ height: 90 }}

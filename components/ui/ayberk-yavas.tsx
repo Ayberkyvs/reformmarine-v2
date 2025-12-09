@@ -10,7 +10,7 @@ const Yavas = ({ className }: { className?: string }) => {
       <Link href="https://ayberkyavas.com/">
         <Image
           src="https://ayberkyavas.com/logo_embed.png"
-          width={106}
+          width={80}
           height={35}
           alt="Ayberk Yavas Logo"
           className="brightness-0"
