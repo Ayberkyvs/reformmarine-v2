@@ -5,7 +5,6 @@ import NavMenu from "./NavMenu";
 import { navData } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Socials from "./Socials";
-import Yavas from "./ui/ayberk-yavas";
 import { socialLinks } from "@/lib/data";
 import HeaderAnimation from "./animations/HeaderAnimation";
 

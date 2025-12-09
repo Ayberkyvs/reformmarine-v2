@@ -2,7 +2,7 @@
   "name": "reformmarine-v2",
   "description": "Reform Marine provides mechanical and electrical services for ships and supplies spare parts. Our mission is to ensure safety and satisfaction in maritime operations by delivering high-quality service and innovative solutions. With our expert team and a wide range of services, we offer fast and reliable solutions tailored to our customers' needs.",
   "defaultBranch": "main",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/Ayberkyvs/reformmarine-v2"
@@ -10,7 +10,7 @@
   "author": "Ayberk Yavas",
   "license": "MIT",
   "engines": {
-    "node": "23.7.0"
+    "node": "24.x"
   },
   "categories": [
     "Other",
@@ -42,10 +42,6 @@
     "prebuild": "pnpm run typegen",
     "predev": "pnpm run typegen",
     "typegen": "sanity schema extract --enforce-required-fields --path=./sanity/extract.json && sanity typegen generate"
-  },
-  "overrides": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
