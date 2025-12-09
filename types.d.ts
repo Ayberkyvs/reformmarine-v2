@@ -30,9 +30,9 @@ export type Benefit = {
 };
 
 export interface ActionButton {
-  id: string
-  label: string
-  url: string
-  icon: ReactNode
-  bgColor: "blue" | "red" | "green" | "yellow"
+  id: string;
+  label: string;
+  url: string;
+  icon: ReactNode;
+  bgColor: "blue" | "red" | "green" | "yellow";
 }

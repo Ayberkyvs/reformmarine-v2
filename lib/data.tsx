@@ -260,7 +260,7 @@ const actionButtons: ActionButton[] = [
     id: "whatsapp",
     label: "WhatsApp",
     url: "https://wa.me/905546733676",
-    icon: <WhatsApp className="size-5"/>,
+    icon: <WhatsApp className="size-5" />,
     bgColor: "green",
   },
   {
@@ -270,7 +270,7 @@ const actionButtons: ActionButton[] = [
     icon: <Mail className="size-5" />,
     bgColor: "blue",
   },
-]
+];
 
 export {
   navData,
@@ -279,5 +279,5 @@ export {
   socialLinks,
   stickyScrollData,
   services,
-  actionButtons
+  actionButtons,
 };

@@ -56,12 +56,14 @@ Follow these steps to set up the project locally:
 ### Installation Steps
 
 1. Clone the repository:
+
    ```sh
    git clone https://github.com/reformmarine/reformmarine-v2.git
    cd reformmarine-v2
    ```
 
 2. Install dependencies:
+
    ```sh
    npm install
    ```
@@ -101,7 +103,8 @@ Or deploy on platforms like Vercel or Netlify.
 ## 📜 Packages Used <a name="packages-used"></a>
 
 ### Dependencies
-- `next` - v15.2.1.Canary 
+
+- `next` - v15.2.1.Canary
 - `react` - v19
 - `react-dom` - v19
 - `sanity` - v3
@@ -117,6 +120,7 @@ Or deploy on platforms like Vercel or Netlify.
 - `easymde` - Markdown editor
 
 ### Dev Dependencies
+
 - `eslint`, `eslint-config-next`, `eslint-config-prettier`, `eslint-plugin-tailwindcss` - Linting
 - `prettier`, `prettier-plugin-tailwindcss` - Code formatting
 - `typescript` - v5 - Type checking
@@ -138,4 +142,3 @@ Or deploy on platforms like Vercel or Netlify.
 
 - Reform Marine team
 - Open-source contributors
-
