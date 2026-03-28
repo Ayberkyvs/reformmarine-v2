@@ -56,7 +56,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dompurify": "^3.3.1",
+    "dompurify": "^3.3.2",
     "easymde": "^2.20.0",
     "framer-motion": "^12.23.25",
     "import-in-the-middle": "^1.15.0",
